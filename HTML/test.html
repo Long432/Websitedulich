@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Thông Tin Sinh Viên</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 50px auto; }
+        form { border: 1px solid #ccc; padding: 20px; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>Form Thông Tin Sinh Viên</h1>
+    <form>
+        <label>Họ và tên:</label>
+        <input type="text" name="name" placeholder="Nhập họ và tên" required>
+        
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Nhập email" required>
+        
+        <label>Số điện thoại:</label>
+        <input type="tel" name="phone" placeholder="Nhập số điện thoại">
+        
+        <label>Ngày sinh:</label>
+        <input type="date" name="dob" required>
+        
+        <label>Số hiệu sinh viên:</label>
+        <input type="text" name="id" placeholder="Nhập mã SV" required style="text-transform: uppercase;">
+        
+        <label>Giới tính:</label>
+        <input type="radio" name="gender" value="male" required> Nam
+        <input type="radio" name="gender" value="female"> Nữ
+        
+        <label>Địa chỉ:</label>
+        <textarea name="address" rows="3" placeholder="Nhập địa chỉ"></textarea>
+        
+        <label>Ghi chú:</label>
+        <textarea name="notes" rows="4" placeholder="Nhập ghi chú"></textarea>
+
+        <button type="submit">Gửi</button>
+        <button type="reset">Xóa</button>
+    </form>
+</body>
+</html>
