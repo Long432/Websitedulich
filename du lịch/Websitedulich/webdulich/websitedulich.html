@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Du lịch Việt Nam</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: darkgreen; color: white; padding: 15px; text-align: center; }
+    nav { background: #eee; padding: 10px; text-align: center; }
+    nav a { margin: 0 15px; text-decoration: none; color: darkgreen; font-weight: bold; }
+    section { padding: 20px; }
+    h2 { color: darkgreen; }
+    .place { margin-bottom: 20px; }
+    .place img { width: 300px; height: auto; border-radius: 8px; }
+    footer { background: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+  
+  </style>
+  <link rel="stylesheet" href="giaodien.css">
+</head>
+<body>
+  <header>
+    <h1>Địa điểm du lịch nổi tiếng ở Việt Nam</h1>
+  </header>
+
+  <nav>
+    <a href="#halong">Vịnh Hạ Long</a>
+    <a href="#hoian">Phố cổ Hội An</a>
+    <a href="#sapa">Sa Pa</a>
+    <a href="#phuquoc">Phú Quốc</a>
+  </nav>
+
+  <section id="halong" class="place">
+    <h2>Vịnh Hạ Long</h2>
+    <img src="halong.jpeg" alt="Vịnh Hạ Long">
+    <p>Di sản thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi kỳ vĩ.</p>
+  </section>
+
+  <section id="hoian" class="place">
+    <h2>Phố cổ Hội An</h2>
+    <img src="hoian.jpg" alt="Phố cổ Hội An">
+    <p>Thành phố cổ kính với những ngôi nhà gỗ và đèn lồng rực rỡ.</p>
+  </section>
+
+  <section id="sapa" class="place">
+    <h2>Sa Pa</h2>
+    <img src="sapa.jpg" alt="Sa Pa">
+    <p>Thị trấn vùng cao nổi tiếng với ruộng bậc thang và khí hậu mát mẻ.</p>
+  </section>
+
+  <section id="phuquoc" class="place">
+    <h2>Phú Quốc</h2>
+    <img src="phuquoc.avif" alt="Phú Quốc">
+    <p>Hòn đảo ngọc với bãi biển tuyệt đẹp và hải sản phong phú.</p>
+  </section>
+
+    <section id="contact">
+  <h2>Liên hệ & Đăng ký</h2>
+  <form class="contact-form">
+    <div class="form-group">
+      <label for="name">Họ và tên</label>
+      <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Nội dung</label>
+      <textarea id="message" name="message" rows="4" placeholder="Viết lời nhắn..." required></textarea>
+    </div>
+
+    <button type="submit">Gửi đăng ký</button>
+  </form>
+</section>
+  <footer>
+    <p>&copy; 2026 Du lịch Việt Nam</p>
+  </footer>
+</body>
+</html>
