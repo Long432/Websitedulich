@@ -6,6 +6,8 @@
   <title>Lập Kế Hoạch Du Lịch ✈️</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -55,6 +57,17 @@
     </section>
 
     <section class="list-section">
+      
+      <div class="stats-box">
+          <div class="chart-container">
+              <canvas id="myChart"></canvas>
+          </div>
+          <div class="stats-text">
+              <h3>Tiến độ chuyến đi</h3>
+              <p>Đã hoàn thành: <span id="percent-done">0%</span></p>
+              <p>Tổng địa điểm: <span id="total-count">0</span></p>
+          </div>
+      </div>
       <div class="list-header">
         <h2><i class="fas fa-list-ul"></i> Danh sách của tôi</h2>
         

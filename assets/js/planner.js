@@ -1,8 +1,8 @@
 ﻿// --- 1. KHỞI TẠO DỮ LIỆU ---
-// Lấy dữ liệu từ bộ nhớ, nếu không có thì tạo mảng rỗng
 let plans = JSON.parse(localStorage.getItem('travelPlans')) || [];
+let myChart = null; // Biến để chứa biểu đồ
 
-// Lấy các thẻ HTML cần dùng (Đảm bảo HTML của cậu đã có các ID này)
+// Lấy các thẻ HTML
 const planForm = document.getElementById('plan-form');
 const planList = document.getElementById('plan-list');
 const emptyMsg = document.getElementById('empty-msg'); 
@@ -10,14 +10,16 @@ const filterStatus = document.getElementById('filter-status');
 const searchInput = document.getElementById('search-keyword');
 const btnClearAll = document.getElementById('btn-clear-all');
 
+// Lấy các thẻ thống kê (MỚI)
+const totalCountSpan = document.getElementById('total-count');
+const percentDoneSpan = document.getElementById('percent-done');
+
 // --- 2. HÀM VẼ GIAO DIỆN (Render) ---
 function renderPlans() {
-    // Nếu HTML thiếu thẻ plan-list thì dừng lại để tránh lỗi
     if (!planList) return;
-
-    planList.innerHTML = ''; // Xóa danh sách cũ
+    planList.innerHTML = ''; 
     
-    // Lấy giá trị lọc (Xử lý lỗi nếu không có ô lọc)
+    // Lấy giá trị lọc
     const statusValue = filterStatus ? filterStatus.value : 'all';
     const keyword = searchInput ? searchInput.value.toLowerCase() : '';
 
@@ -34,13 +36,9 @@ function renderPlans() {
     } else {
         if (emptyMsg) emptyMsg.style.display = 'none';
         
-        // Vẽ từng thẻ
         filteredPlans.forEach((plan) => {
-            // Tìm vị trí thực của plan trong mảng gốc để xử lý Xóa/Sửa đúng cái
             const realIndex = plans.indexOf(plan);
-
             const item = document.createElement('div');
-            // Thêm class màu sắc
             item.className = `plan-item ${plan.priority}-priority ${plan.status === 'done' ? 'completed' : ''}`;
             
             item.innerHTML = `
@@ -60,9 +58,52 @@ function renderPlans() {
             planList.appendChild(item);
         });
     }
+
+    // 🔥 CẬP NHẬT 3: Gọi hàm vẽ biểu đồ mỗi khi render lại
+    updateStatsAndChart();
 }
 
-// --- 3. CÁC HÀM PHỤ TRỢ ---
+// --- 3. HÀM VẼ BIỂU ĐỒ & THỐNG KÊ (MỚI) ---
+function updateStatsAndChart() {
+    const total = plans.length;
+    const done = plans.filter(p => p.status === 'done').length;
+    const pending = total - done;
+
+    // Cập nhật số liệu text
+    if (totalCountSpan) totalCountSpan.innerText = total;
+    if (percentDoneSpan) percentDoneSpan.innerText = total === 0 ? '0%' : Math.round((done / total) * 100) + '%';
+
+    // Vẽ biểu đồ tròn (Doughnut Chart)
+    const ctx = document.getElementById('myChart');
+    if (ctx) {
+        // Hủy biểu đồ cũ trước khi vẽ cái mới (để tránh lỗi đè hình)
+        if (myChart) {
+            myChart.destroy();
+        }
+
+        // Tạo biểu đồ mới
+        myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Đã đi', 'Chưa đi'],
+                datasets: [{
+                    data: [done, pending],
+                    backgroundColor: ['#2ed573', '#ff4757'], // Xanh lá - Đỏ
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    }
+}
+
+// --- 4. CÁC HÀM PHỤ TRỢ ---
 function getPriorityLabel(priority) {
     if (priority === 'high') return 'Must Go';
     if (priority === 'medium') return 'Should Go';
@@ -79,45 +120,32 @@ function saveToLocal() {
     localStorage.setItem('travelPlans', JSON.stringify(plans));
 }
 
-// --- 4. XỬ LÝ SỰ KIỆN ---
+// --- 5. XỬ LÝ SỰ KIỆN ---
 
-// SỰ KIỆN 1: Thêm mới
 if (planForm) {
     planForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // <--- DÒNG QUAN TRỌNG NHẤT: CHẶN LOAD LẠI TRANG
-
-        // Lấy dữ liệu
+        e.preventDefault(); 
         const title = document.getElementById('title').value;
         const deadline = document.getElementById('deadline').value;
         const priority = document.getElementById('priority').value;
         const description = document.getElementById('description').value;
 
-        // Kiểm tra ngày tháng
         if (new Date(deadline) < new Date()) {
             alert('❌ Ngày đi không được ở quá khứ!');
             return;
         }
 
-        // Thêm vào mảng
-        plans.push({ 
-            title: title, 
-            deadline: deadline, 
-            priority: priority, 
-            description: description, 
-            status: 'pending' 
-        });
-
-        // Tự động Reset bộ lọc về "Tất cả" để nhìn thấy cái mới thêm
+        plans.push({ title, deadline, priority, description, status: 'pending' });
+        
         if (filterStatus) filterStatus.value = 'all';
         if (searchInput) searchInput.value = '';
 
         saveToLocal();
         renderPlans();
-        planForm.reset(); // Xóa trắng form
+        planForm.reset();
     });
 }
 
-// SỰ KIỆN 2: Các nút chức năng (Global)
 window.deletePlan = function(index) {
     if (confirm('Xóa địa điểm này nhé?')) {
         plans.splice(index, 1);
@@ -132,11 +160,9 @@ window.toggleStatus = function(index) {
     renderPlans();
 };
 
-// SỰ KIỆN 3: Tìm kiếm & Lọc
 if (searchInput) searchInput.addEventListener('input', renderPlans);
 if (filterStatus) filterStatus.addEventListener('change', renderPlans);
 
-// SỰ KIỆN 4: Xóa hết
 if (btnClearAll) {
     btnClearAll.addEventListener('click', function() {
         if (confirm('Bạn chắc chắn muốn xóa TOÀN BỘ lịch trình không?')) {
@@ -147,6 +173,5 @@ if (btnClearAll) {
     });
 }
 
-// --- 5. CHẠY LẦN ĐẦU ---
-console.log("File JS đã chạy thành công!"); // Kiểm tra Console xem có dòng này không
+// Chạy lần đầu
 renderPlans();
