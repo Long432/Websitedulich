@@ -1,8 +1,89 @@
 ﻿<!DOCTYPE html>
-<html>
-<head><title>Lập kế hoạch du lịch</title></head>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lập Kế Hoạch Du Lịch ✈️</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 <body>
-    <h1>Trang Quản Lý Kế Hoạch (Đang xây dựng)</h1>
-    <a href="index.html">Quay về trang chủ</a>
+
+  <nav>
+    <a href="index.html">🏠 Trang chủ</a>
+    <a href="planner.html" class="active">📅 Lập kế hoạch</a>
+  </nav>
+
+  <header style="background: linear-gradient(90deg, #005c97, #363795);">
+    <h1>Kế Hoạch Chuyến Đi Của Tôi 🎒</h1>
+    <p>Lên danh sách để không bỏ lỡ bất cứ trải nghiệm nào!</p>
+  </header>
+
+  <main class="planner-container">
+    
+    <section class="input-section">
+      <h2><i class="fas fa-plus-circle"></i> Thêm địa điểm mới</h2>
+      <form id="plan-form">
+        <div class="form-group">
+          <label>Địa điểm / Hoạt động <span style="color:red">*</span></label>
+          <input type="text" id="title" placeholder="VD: Ăn Cao Lầu, Tắm biển Mỹ Khê..." required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half">
+            <label>Ngày đi dự kiến <span style="color:red">*</span></label>
+            <input type="datetime-local" id="deadline" required>
+          </div>
+
+          <div class="form-group half">
+            <label>Độ "máu" (Ưu tiên)</label>
+            <select id="priority">
+              <option value="high">🔥 Must Go (Phải đi)</option>
+              <option value="medium">⭐ Should Go (Nên đi)</option>
+              <option value="low">☕ Chill (Rảnh thì ghé)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Ghi chú chi tiết</label>
+          <textarea id="description" rows="3" placeholder="VD: Giá vé 50k, nhớ mang mũ, kem chống nắng..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-add"><i class="fas fa-paper-plane"></i> Thêm vào lịch trình</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <div class="list-header">
+        <h2><i class="fas fa-list-ul"></i> Danh sách của tôi</h2>
+        
+        <div class="toolbar">
+            <input type="text" id="search-keyword" placeholder="🔍 Tìm địa điểm..." class="search-box">
+            
+            <select id="filter-status">
+                <option value="all">Tất cả trạng thái</option>
+                <option value="pending">⏳ Chưa đi</option>
+                <option value="done">✅ Đã đi</option>
+            </select>
+
+            <button id="btn-clear-all" class="btn-clear" title="Xóa toàn bộ">Xóa hết</button>
+        </div>
+      </div>
+
+      <div id="plan-list" class="plan-list"></div>
+      
+      <p id="empty-msg" style="text-align: center; color: #777; margin-top: 20px; display: none;">
+        Chưa có kế hoạch nào. Hãy thêm ngay bên trên nhé! 👇
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 My Travel Planner - Nhóm Sivi</p>
+  </footer>
+
+  <script src="assets/js/planner.js"></script>
 </body>
 </html>
