@@ -106,23 +106,22 @@ main {
   gap: 20px;
 }
 
-/* Contact Section */
-#contact {
+/* Bình luận */
+#comments {
   background: #f0f8f5;
   padding: 50px 20px;
   text-align: center;
 }
 
-#contact h2 {
+#comments h2 {
   color: darkgreen;
   margin-bottom: 30px;
   font-size: 1.8em;
 }
 
-/* Form Container */
-.contact-form {
+.comment-form {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   background: #fff;
   padding: 25px;
   border-radius: 12px;
@@ -130,7 +129,6 @@ main {
   text-align: left;
 }
 
-/* Form Group */
 .form-group {
   margin-bottom: 20px;
 }
@@ -159,8 +157,7 @@ main {
   outline: none;
 }
 
-/* Submit Button */
-.contact-form button {
+.comment-form button {
   width: 100%;
   padding: 12px;
   background: darkgreen;
@@ -172,25 +169,34 @@ main {
   transition: background 0.3s, transform 0.2s;
 }
 
-.contact-form button:hover {
+.comment-form button:hover {
   background: seagreen;
   transform: scale(1.02);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .contact-form {
-    padding: 15px;
-  }
+/* Danh sách bình luận */
+.comment-list {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
 
-  .form-group input,
-  .form-group textarea {
-    font-size: 0.95em;
-  }
+.comment-list h3 {
+  margin-bottom: 15px;
+  color: darkgreen;
+}
 
-  .contact-form button {
-    font-size: 1em;
-  }
+.comment-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-list li {
+  background: #fff;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 /* --- STYLE CHO TRANG PLANNER --- */
 .planner-container {
