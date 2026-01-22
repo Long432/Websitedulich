@@ -1,3 +1,4 @@
+/* index.html */
 /* Reset cơ bản */
 * {
   margin: 0;
@@ -198,4 +199,204 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
-section.place img { max-width: 100%; height: auto; border-radius: 8px; }
+
+/* planner.html */
+/* --- 1. Thiết lập chung --- */
+:root {
+    --primary-color: #005c97;
+    --secondary-color: #363795;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --light-bg: #f4f7f6;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- 2. Điều hướng (Navbar) --- */
+nav {
+    background: var(--white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a.active, nav a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* --- 3. Header --- */
+header {
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--white);
+}
+
+header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+/* --- 4. Bố cục chính (Main) --- */
+.planner-container {
+    max-width: 1100px;
+    margin: -40px auto 40px; /* Đẩy lên trên header một chút */
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* 2 cột: Form và Danh sách */
+    gap: 30px;
+}
+
+/* Responsive cho Tablet/Mobile */
+@media (max-width: 992px) {
+    .planner-container { grid-template-columns: 1fr; margin-top: 20px; }
+}
+
+/* --- 5. Form nhập liệu --- */
+.input-section, .list-section {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+h2 { margin-bottom: 20px; color: var(--secondary-color); font-size: 1.4rem; }
+
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 5px; }
+
+.form-row { display: flex; gap: 15px; }
+.half { flex: 1; }
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0,92,151,0.2);
+}
+
+.btn-add {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add:hover { background: var(--secondary-color); transform: translateY(-2px); }
+
+/* --- 6. Thống kê (Stats Box) --- */
+.stats-box {
+    display: flex;
+    align-items: center;
+    background: #eef2f7;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.chart-container { width: 250px; height: 150px;margin: 0 auto; }
+.stats-text h3 { color: var(--primary-color); margin-bottom: 5px; }
+
+/* --- 7. Toolbar (Search & Filter) --- */
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.search-box { flex: 2; min-width: 200px; }
+#filter-status { flex: 1; min-width: 150px; }
+.btn-clear { background: var(--danger-color); color: white; border: none; padding: 0 15px; border-radius: 8px; cursor: pointer; }
+
+/* --- 8. Danh sách Task (Cards) --- */
+.plan-item {
+    background: #fff;
+    border-left: 6px solid var(--primary-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Trạng thái đã hoàn thành  */
+.plan-item.done {
+    opacity: 0.7;
+    background: #f8f8f8;
+    border-left-color: var(--success-color);
+}
+.plan-item.done h3 { text-decoration: line-through; color: #888; }
+
+/* Phân loại Priority bằng màu sắc */
+.priority-high { color: var(--danger-color); font-weight: bold; }
+.priority-medium { color: var(--warning-color); }
+.priority-low { color: var(--success-color); }
+
+.task-info { flex: 1; }
+.task-actions { display: flex; gap: 10px; }
+
+.btn-icon {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-check { color: var(--success-color); }
+.btn-edit { color: var(--primary-color); }
+.btn-delete { color: var(--danger-color); }
+
+.btn-icon:hover { transform: scale(1.2); }
+
+/* --- 9. Footer --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #333;
+    color: white;
+    margin-top: 40px;
+}
