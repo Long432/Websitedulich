@@ -1,4 +1,4 @@
-﻿// --- 1. KHỞI TẠO DỮ LIỆU ---
+// --- 1. KHỞI TẠO DỮ LIỆU ---
 let plans = JSON.parse(localStorage.getItem('travelPlans')) || [];
 let myChart = null; // Biến để chứa biểu đồ
 
@@ -74,33 +74,32 @@ function updateStatsAndChart() {
     if (percentDoneSpan) percentDoneSpan.innerText = total === 0 ? '0%' : Math.round((done / total) * 100) + '%';
 
     // Vẽ biểu đồ tròn (Doughnut Chart)
-    const ctx = document.getElementById('myChart');
-    if (ctx) {
-        // Hủy biểu đồ cũ trước khi vẽ cái mới (để tránh lỗi đè hình)
-        if (myChart) {
-            myChart.destroy();
-        }
-
-        // Tạo biểu đồ mới
-        myChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Đã đi', 'Chưa đi'],
-                datasets: [{
-                    data: [done, pending],
-                    backgroundColor: ['#2ed573', '#ff4757'], // Xanh lá - Đỏ
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { position: 'bottom' }
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+    type: 'doughnut', // Hoặc 'pie'
+    data: {
+        labels: ['Đã đi', 'Chưa đi'],
+        datasets: [{
+            data: [2, 5], // Dữ liệu mẫu
+            backgroundColor: ['#2ecc71', '#ff4757'],
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: true,
+                position: 'right', // Cho chú thích sang bên phải
+                align: 'center',   // Căn giữa theo chiều dọc của chart
+                labels: {
+                    boxWidth: 20,  // Độ rộng của ô màu xanh/đỏ
+                    padding: 15,   // Khoảng cách giữa các dòng chú thích
+                    font: { size: 14 }
                 }
             }
-        });
+        },
+        maintainAspectRatio: false
     }
+});
 }
 
 // --- 4. CÁC HÀM PHỤ TRỢ ---
