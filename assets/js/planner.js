@@ -39,7 +39,7 @@ function renderPlans() {
         filteredPlans.forEach((plan) => {
             const realIndex = plans.indexOf(plan);
             const item = document.createElement('div');
-            item.className = `plan-item ${plan.priority}-priority ${plan.status === 'done' ? 'completed' : ''}`;
+            item.className = `plan-item ${plan.priority}-priority ${plan.status === 'done' ? 'done' : ''}`;
             
             item.innerHTML = `
                 <div class="plan-info">

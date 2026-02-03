@@ -1,73 +1,109 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Du lịch Việt Nam</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khám Phá Việt Nam | Du lịch & Trải nghiệm</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-  
-  <header>
-    <h1>Một số địa điểm du lịch nổi tiếng ở Việt Nam</h1>
-  </header>
 
   <nav>
-    <a href="index.html">🏠 Trang chủ</a>
-    <a href="planner.html">📅 Lập kế hoạch</a>
+    <div class="nav-logo">Vietnam Travel</div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Trang chủ</a>
+      <a href="planner.html">Lập kế hoạch</a>
+    </div>
   </nav>
 
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Vẻ Đẹp Việt Nam</h1>
+      <p>Khám phá những danh lam thắng cảnh tuyệt vời nhất của đất nước hình chữ S.</p>
+      <a href="#destinations" class="btn-primary">Khám phá ngay</a>
+    </div>
+  </header>
+
   <main>
-    <section id="halong" class="place">
-      <h2>Vịnh Hạ Long</h2>
-      <img src="assets/img/halong.jpeg" alt="Vịnh Hạ Long">
-      <p>Di sản thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi kỳ vĩ.</p>
+    <section id="destinations">
+      <h2 class="section-title">Điểm Đến Nổi Bật</h2>
+
+      <div class="destinations-grid">
+        <!-- Card 1: Hạ Long -->
+        <article class="card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/halong.jpeg" alt="Vịnh Hạ Long - Di sản thiên nhiên thế giới">
+          </div>
+          <div class="card-content">
+            <h3>Vịnh Hạ Long</h3>
+            <p>Di sản thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi kỳ vĩ và non nước hữu tình.</p>
+          </div>
+        </article>
+
+        <!-- Card 2: Hội An -->
+        <article class="card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/hoian.jpg" alt="Phố cổ Hội An - Nét đẹp cổ kính">
+          </div>
+          <div class="card-content">
+            <h3>Phố cổ Hội An</h3>
+            <p>Thành phố cổ kính với những ngôi nhà gỗ rêu phong, đèn lồng rực rỡ và ẩm thực đặc sắc.</p>
+          </div>
+        </article>
+
+        <!-- Card 3: Sa Pa -->
+        <article class="card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/sapa.jpg" alt="Sa Pa - Thị trấn trong sương">
+          </div>
+          <div class="card-content">
+            <h3>Sa Pa</h3>
+            <p>Thị trấn vùng cao nổi tiếng với ruộng bậc thang chín vàng, đỉnh Fansipan và khí hậu mát mẻ.</p>
+          </div>
+        </article>
+
+        <!-- Card 4: Phú Quốc -->
+        <article class="card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/phuquoc.avif" alt="Phú Quốc - Đảo Ngọc">
+          </div>
+          <div class="card-content">
+            <h3>Phú Quốc</h3>
+            <p>Hòn đảo ngọc với bãi biển cát trắng nước trong xanh, resort sang trọng và hải sản phong phú.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="hoian" class="place">
-      <h2>Phố cổ Hội An</h2>
-      <img src="assets/img/hoian.jpg" alt="Phố cổ Hội An">
-      <p>Thành phố cổ kính với những ngôi nhà gỗ và đèn lồng rực rỡ.</p>
-    </section>
+    <section id="contact" class="contact-section">
+      <h2 class="section-title">Liên Hệ Tư Vấn</h2>
+      <p>Để lại thông tin để nhận tư vấn lịch trình chi tiết và ưu đãi hấp dẫn.</p>
 
-    <section id="sapa" class="place">
-      <h2>Sa Pa</h2>
-      <img src="assets/img/sapa.jpg" alt="Sa Pa">
-      <p>Thị trấn vùng cao nổi tiếng với ruộng bậc thang và khí hậu mát mẻ.</p>
-    </section>
-
-    <section id="phuquoc" class="place">
-      <h2>Phú Quốc</h2>
-      <img src="assets/img/phuquoc.avif" alt="Phú Quốc">
-      <p>Hòn đảo ngọc với bãi biển tuyệt đẹp và hải sản phong phú.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Liên hệ & Đăng ký</h2>
       <form class="contact-form">
         <div class="form-group">
-          <label for="name">Họ và tên</label>
-          <input type="text" id="name" name="name" placeholder="Nhập họ và tên..." required>
+          <input type="text" id="name" name="name" placeholder="Họ và tên của bạn" required>
         </div>
 
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Nhập email..." required>
+          <input type="email" id="email" name="email" placeholder="Địa chỉ Email" required>
         </div>
 
         <div class="form-group">
-          <label for="message">Nội dung</label>
-          <textarea id="message" name="message" rows="4" placeholder="Viết lời nhắn..." required></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="Lời nhắn hoặc yêu cầu của bạn..."
+            required></textarea>
         </div>
 
-        <button type="submit">Gửi đăng ký</button>
+        <button type="submit" class="btn-submit">Gửi thông tin</button>
       </form>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Du lịch Việt Nam - Nhóm Sivi</p>
+  <footer style="text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem;">
+    <p>&copy; 2026 Vietnam Travel - Designed with ❤️ by Team Sivi</p>
   </footer>
 </body>
+
 </html>
