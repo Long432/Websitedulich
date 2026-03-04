@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám phá Vịnh Hạ Long</title>
+    <style>
+        /* --- 1. THIẾT LẬP CHUNG --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- 2. HEADER (GIỐNG TRANG CHỦ) --- */
+        header {
+            background-color: #008000; /* Màu xanh chủ đạo */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- 3. ẢNH BÌA (HERO SECTION) --- */
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* --- 4. BỐ CỤC NỘI DUNG (CONTAINER) --- */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex; /* Dùng Flexbox chia cột */
+            gap: 30px; /* Khoảng cách giữa 2 cột */
+        }
+
+        /* Cột Nội dung chính (Chiếm 70%) */
+        .main-content {
+            flex: 7; 
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Cột Sidebar (Chiếm 30%) */
+        .sidebar {
+            flex: 3;
+        }
+
+        /* --- 5. STYLE CHO NỘI DUNG --- */
+        h2 {
+            color: #008000;
+            border-bottom: 2px solid #008000;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .highlight-img {
+            width: 100%;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        /* --- 6. SIDEBAR CARD (THÔNG TIN TOUR) --- */
+        .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky; /* Dính chặt khi cuộn */
+            top: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            display: block;
+            color: #555;
+        }
+
+        .price {
+            color: #d32f2f; /* Màu đỏ cho giá */
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .btn-book {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-book:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Responsive: Khi màn hình nhỏ (điện thoại), chuyển thành 1 cột */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .hero-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Du Lịch Việt Nam</h1>
+        <nav>
+            <a href="#">🏠 Trang chủ</a>
+            <a href="#">📋 Lập kế hoạch</a>
+            <a href="#">📞 Liên hệ</a>
+        </nav>
+    </header>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ha_Long_Bay_2.jpg/1200px-Ha_Long_Bay_2.jpg" alt="Vịnh Hạ Long Toàn Cảnh" class="hero-image">
+
+    <div class="container">
+        
+        <div class="main-content">
+            <h2>Vịnh Hạ Long - Kỳ Quan Thiên Nhiên</h2>
+            <p>Vịnh Hạ Long (Quảng Ninh) là một trong những điểm du lịch nổi tiếng nhất Việt Nam, được UNESCO hai lần công nhận là Di sản thiên nhiên thế giới. Với hàng nghìn hòn đảo đá vôi lớn nhỏ nhô lên từ mặt nước xanh ngọc bích, Hạ Long mang vẻ đẹp hùng vĩ và thơ mộng như một bức tranh thủy mặc sống động.</p>
+            
+            <img src="https://ik.imagekit.io/tvlk/blog/2022/10/hang-sung-sot-1.jpg" alt="Hang Sửng Sốt" class="highlight-img">
+            
+            <h2>Trải nghiệm không thể bỏ qua</h2>
+            <ul>
+                <li><strong>Thăm hang động:</strong> Khám phá Hang Sửng Sốt, Động Thiên Cung với hệ thống nhũ đá kỳ ảo.</li>
+                <li><strong>Chèo thuyền Kayak:</strong> Tự mình len lỏi qua các hang luồn và chân đảo đá.</li>
+                <li><strong>Ngủ đêm trên du thuyền:</strong> Trải nghiệm đẳng cấp 5 sao giữa lòng di sản.</li>
+                <li><strong>Tắm biển đảo Ti Top:</strong> Leo lên đỉnh núi ngắm toàn cảnh vịnh từ trên cao.</li>
+            </ul>
+
+            <h2>Ẩm thực đặc sắc</h2>
+            <p>Đến Hạ Long, du khách không thể bỏ qua các món hải sản tươi ngon như: Chả mực giã tay, Sá sùng, Hàu nướng mỡ hành và Bún bề bề.</p>
+        </div>
+
+        <aside class="sidebar">
+            <div class="info-card">
+                <h3>Thông tin chuyến đi</h3>
+                
+                <div class="info-item">
+                    <span class="info-label">📍 Địa điểm:</span>
+                    Hạ Long, Quảng Ninh
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">📅 Thời gian lý tưởng:</span>
+                    Tháng 4 - Tháng 6
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">💰 Chi phí tham khảo:</span>
+                    <span class="price">36.000.000đ</span> /người
+                </div>
+
+                <a href="#" class="btn-book">ĐẶT TOUR NGAY</a>
+                <p style="margin-top:10px; font-size: 13px; color: #666; text-align: center;">*Cam kết giá tốt nhất</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer style="text-align: center; padding: 20px; color: #666; margin-top: 30px; border-top: 1px solid #ddd;">
+        &copy; 2026 Du lịch Việt Nam. All rights reserved.
+    </footer>
+
+</body>
+</html>
