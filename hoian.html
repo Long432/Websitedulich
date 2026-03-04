@@ -1,134 +1,270 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khám phá Phố Cổ Hội An</title>
-    <style>
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
-
-        header { background-color: #008000; color: white; padding: 15px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        header h1 { margin: 0; font-size: 28px; }
-        nav { margin-top: 10px; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-
-        .hero-image { width: 100%; height: 400px; object-fit: cover; display: block; }
-
-        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; display: flex; gap: 30px; }
-        .main-content { flex: 7; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .sidebar { flex: 3; }
-
-        h2 { color: #008000; border-bottom: 2px solid #008000; padding-bottom: 10px; margin-top: 30px; margin-bottom: 15px; font-size: 22px; }
-        h2:first-of-type { margin-top: 0; }
-        h3 { color: #333; margin-top: 20px; margin-bottom: 10px; font-size: 18px; }
-        p { margin-bottom: 15px; text-align: justify; }
-        ul { margin-bottom: 15px; padding-left: 20px; }
-        li { margin-bottom: 8px; }
-
-        .content-img { width: 100%; border-radius: 5px; margin: 15px 0; object-fit: cover; max-height: 400px; }
-
-        .info-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 20px; }
-        .info-item { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .info-label { font-weight: bold; display: block; color: #555; }
-        .price { color: #d32f2f; font-size: 24px; font-weight: bold; }
-        .btn-book { display: block; width: 100%; padding: 12px; background-color: #d32f2f; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s; }
-        .btn-book:hover { background-color: #b71c1c; }
-
-        footer { text-align: center; padding: 20px; color: #666; margin-top: 30px; border-top: 1px solid #ddd; }
-
-        @media (max-width: 768px) { .container { flex-direction: column; } .hero-image { height: 250px; } }
-    </style>
+    <title>Khám phá Phố Cổ Hội An | Vietnam Travel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
 
-    <header>
-        <h1>Du Lịch Việt Nam</h1>
-        <nav>
-            <a href="index.html">🏠 Trang chủ</a>
-            <a href="#">📋 Lập kế hoạch</a>
-            <a href="#">📞 Liên hệ</a>
-        </nav>
+<body class="hoian-page">
+    <nav>
+        <div class="nav-logo">Vietnam Travel</div>
+        <div class="nav-links">
+            <a href="index.html">Trang chủ</a>
+            <a href="planner.html">Lập kế hoạch</a>
+        </div>
+    </nav>
+
+    <header class="detail-hero" style="background-image: url('assets/img/hoian.jpg');">
+        <div class="detail-hero-content">
+            <h1>Phố Cổ Hội An</h1>
+            <p>Nét đẹp cổ kính với những ngôi nhà gỗ rêu phong, đèn lồng rực rỡ và nền ẩm thực đặc sắc vạn người mê
+                không nơi nào sánh bằng.</p>
+        </div>
     </header>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Hoi_An_Ancient_Town.jpg/1200px-Hoi_An_Ancient_Town.jpg" alt="Toàn cảnh Phố Cổ Hội An" class="hero-image">
+    <main class="detail-container">
+        <div class="detail-main">
+            <!-- 1. Giới thiệu -->
+            <section class="detail-section">
+                <h2><i class="fas fa-info-circle"></i> Giới thiệu chung</h2>
+                <p>Phố cổ Hội An nằm ở hạ lưu sông Thu Bồn, thuộc tỉnh Quảng Nam. Từ thế kỷ 16 đến thế kỷ 19, Hội An là
+                    một thương cảng sầm uất mang dấu ấn giao thoa văn hóa giữa Việt Nam, Nhật Bản, Trung Quốc và cả
+                    phương Tây. Chính sự đa dạng về giao thương này đã nhào nặn nên một Hội An đa sắc màu nhưng luôn
+                    bình dị, giữ gìn được nguyên vẹn nhất cấu trúc của một đô thị cổ truyền thống cho đến tận ngày nay.
+                </p>
+                <p>Sức hấp dẫn của Hội An nằm ở vẻ đẹp ngưng đọng của thời gian. Những vách tường sơn vàng đặc trưng,
+                    mái ngói âm dương rêu phong, và vô số những chiếc đèn lồng treo lơ lửng trước cửa nhà làm say đắm
+                    biết bao thi sĩ. Năm 1999, Hội An chính thức được UNESCO công nhận là Di sản văn hóa thế giới và
+                    liên tục lọt vào danh sách các thành phố mộng mơ nhất hành tinh.</p>
+                <p>Ban ngày, nhịp sống Hội An trôi qua một cách tĩnh lặng. Những tia nắng nhảy mót qua từng kẽ lá, qua
+                    giàn hoa giấy rực rỡ để chiếu xuống các con hẻm cổ kính. Nhưng khi ráng chiều buông xuống và màn đêm
+                    kéo đến, thành phố như được thay một màu áo mới rực rỡ hơn bao giờ hết nhờ ánh sáng lung linh hắt ra
+                    từ hàng ngàn chiếc đèn lồng thủ công muôn sắc.</p>
+                <p>Đến với Hội An, bạn sẽ được tận hưởng không chỉ cảnh quang thiên nhiên, mà còn có những trải nghiệm
+                    văn hóa bản địa độc đáo như hát chòi, làm gốm, may mặc lụa tơ tằm, và đặc biệt là đắm chìm trong một
+                    nền văn hóa ẩm thực đặc trưng với Mì Quảng, Cao Lầu được truyền lửa qua nhiều thế hệ.</p>
+            </section>
 
-    <div class="container">
-        
-        <div class="main-content">
-            <h2>Giới thiệu chung về Phố Cổ Hội An</h2>
-            <p>Phố cổ Hội An được xem là điểm đến thành phố văn hoá hàng đầu châu Á, thu hút hàng trăm lượt khách mỗi năm. Bài giới thiệu về phố cổ Hội An đưa du khách tìm về với những góc nhỏ xinh, ngôi nhà cổ, giàn hoa giấy rực rỡ. Đặt chân đến đây, bạn sẽ cảm nhận được sự thanh bình, thơ mộng nhưng đầy dung dị, gần gũi.</p>
-            
-            <h3>Vị trí địa lý & Lịch sử</h3>
-            <p>Phố cổ Hội An nằm ở hạ lưu sông Thu Bồn, thuộc tỉnh Quảng Nam, cách trung tâm thành phố Đà Nẵng khoảng 30km về phía Tây Nam. Trước đây, nơi này từng được biết đến với tên gọi Faifo.</p>
-            <p>Được xây dựng vào khoảng đầu thế kỷ 16, Hội An từng là thương cảng quốc tế sầm uất, nơi giao thương của các thương nhân Nhật Bản, Trung Quốc và phương Tây. Năm 1999, UNESCO đã công nhận nơi đây là Di sản văn hoá thế giới.</p>
+            <!-- 2. Gợi ý lịch trình -->
+            <section class="detail-section">
+                <h2><i class="fas fa-calendar-alt"></i> Gợi ý Lịch trình 4 Ngày 3 Đêm Đi Sâu Khám Phá</h2>
+                <div class="itinerary-list">
+                    <div class="itinerary-item">
+                        <h4>Ngày 1: Lạc bước trong khu phố cổ</h4>
+                        <p><strong>Sáng:</strong> Ăn sáng bánh mì Phượng. Dạo phố cổ nhẹ nhàng, check-in chùa Cầu và
+                            thăm các hội quán đặc trưng.<br>
+                            <strong>Chiều:</strong> Uống nước Mót, nhâm nhi cafe sân thượng quán Faifo ngắm phố cổ từ
+                            trên cao lộng gió thiên nhiên.<br>
+                            <strong>Tối:</strong> Đi thuyền thả hoa đăng trên dòng sông Hoài thơ mộng, dạo quanh chợ đêm
+                            nhộn nhịp mua sắm đồ thủ công và thưởng thức Cao Lầu.
+                        </p>
+                    </div>
+                    <div class="itinerary-item">
+                        <h4>Ngày 2: Sống xanh với thiên nhiên ven biển</h4>
+                        <p><strong>Sáng:</strong> Thuê xe đạp đi dọc Rừng dừa Bảy Mẫu Cẩm Thanh. Trải nghiệm ngồi thuyền
+                            thúng và xem các cô chú múa thúng siêu nghệ thuật giữa không gian ngập nước xanh mướt.<br>
+                            <strong>Chiều:</strong> Di chuyển ra biển An Bàng tắm biển, tận hưởng không khí trong lành
+                            với những quán bar ven biển cực "chill" mang phong cách boho.<br>
+                            <strong>Tối:</strong> Thưởng thức các món hải sản khổng lồ ở các quán ven biển, tận hưởng
+                            làn gió mát lành đầy mặn mòi.
+                        </p>
+                    </div>
+                    <div class="itinerary-item">
+                        <h4>Ngày 3: Khám phá những đảo hoang và làng nghề</h4>
+                        <p><strong>Sáng:</strong> Lên cano hoặc tàu gỗ từ cảng Cửa Đại di chuyển sang Cù Lao Chàm. Lặn
+                            ngắm san hô (Snorkeling) tại hòn Dài cực kì trong mắt và thăm quan khu bảo tồn biển Cù
+                            Lao.<br>
+                            <strong>Chiều:</strong> Về lại đất liền, ghé thăm làng gốm Thanh Hà. Tự tay nhào nặn và tạo
+                            hình một chiếc ly hoặc bát gốm mang về làm kỉ niệm với sự hướng dẫn của nghệ nhân già.<br>
+                            <strong>Tối:</strong> Nghỉ ngơi tại trung tâm, tham gia xem buổi biểu diễn thực cảnh "Ký Ức
+                            Hội An" (Hoi An Memories) - chương trình đẳng cấp nghệ thuật ngoài trời mô tả lại lịch sử
+                            vàng son của thương cảng năm xưa.
+                        </p>
+                    </div>
+                    <div class="itinerary-item">
+                        <h4>Ngày 4: Chiêm ngưỡng Thánh Địa và Chia tay</h4>
+                        <p><strong>Sáng:</strong> Lên xe đi Thánh địa Mỹ Sơn - khu đền tháp của vương quốc Chăm Pa cổ
+                            xưa đầy bí ẩn. Tìm hiểu những câu chuyện kiến trúc đá không cần chất kết dính qua lời kể của
+                            hướng dẫn viên.<br>
+                            <strong>Trưa:</strong> Thưởng thức Bê Thui Cầu Mống thượng hạng ngay trên đường về để lót
+                            nếp bụng trước khi ra sân bay.<br>
+                            <strong>Chiều:</strong> Đi mua sắm đặc sản như Bánh in, tơ lụa, lồng đèn Hội An làm quà
+                            tặng. Di chuyển về Đà Nẵng để đón chuyến bay. Tạm biệt một miền đất di sản!
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Chua_Cau_Hoi_An_Night.jpg/1200px-Chua_Cau_Hoi_An_Night.jpg" alt="Chùa Cầu Hội An về đêm" class="content-img">
+            <!-- 3. Những nơi xung quanh nên đi -->
+            <section class="detail-section">
+                <h2><i class="fas fa-map-signs"></i> Gợi ý các điểm tham quan liên quan</h2>
+                <p>Xung quanh trung tâm Hội An có vô số các khu dự trữ sinh quyển hoang sơ và các làng nghề cổ kính lâu
+                    đời chờ bạn ghi dấu đôi chân mình:</p>
+                <div class="suggested-grid">
+                    <div class="suggested-card">
+                        <img src="https://images.unsplash.com/photo-1596404754792-7f5ccbb606f2?q=80&w=500&auto=format&fit=crop"
+                            alt="Cù Lao Chàm">
+                        <div class="suggested-card-overlay">
+                            <h4>Cù Lao Chàm, Đảo Ngọc Cù Lao</h4>
+                        </div>
+                    </div>
+                    <div class="suggested-card">
+                        <img src="https://images.unsplash.com/photo-1628126235206-5260b9ea6441?q=80&w=500&auto=format&fit=crop"
+                            alt="Rừng Dừa Bảy Mẫu">
+                        <div class="suggested-card-overlay">
+                            <h4>Rừng Dừa Bảy Mẫu Cẩm Thanh</h4>
+                        </div>
+                    </div>
+                    <div class="suggested-card">
+                        <img src="https://images.unsplash.com/photo-1579201990499-56fb0ea6add5?q=80&w=500&auto=format&fit=crop"
+                            alt="Thánh địa Mỹ Sơn">
+                        <div class="suggested-card-overlay">
+                            <h4>Di sản Thánh địa Mỹ Sơn</h4>
+                        </div>
+                    </div>
+                    <div class="suggested-card">
+                        <img src="https://images.unsplash.com/photo-1583417316335-9f5b2daefc0b?q=80&w=500&auto=format&fit=crop"
+                            alt="Biển An Bàng">
+                        <div class="suggested-card-overlay">
+                            <h4>Bãi biển An Bàng thơ mộng</h4>
+                        </div>
+                    </div>
+                    <div class="suggested-card">
+                        <img src="https://images.unsplash.com/photo-1563214820-22c97aee410b?q=80&w=500&auto=format&fit=crop"
+                            alt="Làng Lụa">
+                        <div class="suggested-card-overlay">
+                            <h4>Làng Lụa Hội An cổ truyền</h4>
+                        </div>
+                    </div>
+                    <div class="suggested-card">
+                        <img src="https://images.unsplash.com/photo-1558223608-f463cc1ba0ca?q=80&w=500&auto=format&fit=crop"
+                            alt="Làng Gốm">
+                        <div class="suggested-card-overlay">
+                            <h4>Làng Gốm Thanh Hà nghìn năm</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <h2>Kiến trúc truyền thống đặc trưng</h2>
-            <p>Trải qua nhiều biến cố thăng trầm, Hội An vẫn giữ được nét đẹp xưa cũ, trầm mặc. Hình ảnh đặc trưng nhất là những ngôi nhà hình ống một hoặc hai tầng, mái ngói rêu phong và tường sơn màu vàng nghệ rực rỡ.</p>
-            <p>Hệ thống đường phố được bố trí theo kiểu bàn cờ với những con đường ngắn, uốn lượn ôm lấy các ngôi nhà. Từng viên gạch, mái ngói đều toát lên vẻ bình dị, mộc mạc của thời gian.</p>
+            <!-- 4. Đồ dùng cần chuẩn bị -->
+            <section class="detail-section">
+                <h2><i class="fas fa-suitcase-rolling"></i> Đồ dùng nên chuẩn bị</h2>
+                <div class="packing-grid">
+                    <div class="packing-card">
+                        <i class="fas fa-tshirt"></i>
+                        <h4>Trang phục Vintage</h4>
+                        <p>Do Hội An có màu vàng chủ đạo đặc trưng, áo dài hoặc quần áo linen sắc trầm sẽ giúp bạn có
+                            hình 1000 like sống ảo cực ăn nhập với phố cổ.</p>
+                    </div>
+                    <div class="packing-card">
+                        <i class="fas fa-shoe-prints"></i>
+                        <h4>Giày êm / Sandal</h4>
+                        <p>Khu phố cổ tuyệt đối cấm xe máy theo giờ, bạn sẽ phải đi bộ dạo chơi khá nhiều qua các đường
+                            lát đá. Một đôi giày êm ái là ưu tiên hàng đầu.</p>
+                    </div>
+                    <div class="packing-card">
+                        <i class="fas fa-hat-sun"></i>
+                        <h4>Đồ chống nắng toàn diện</h4>
+                        <p>Bảo vệ làn da là việc không thể thiếu với nắng gió gay gắt của miền Trung. Đừng quên mang
+                            theo áo khoác, xịt khoáng và kem chống nắng xịn.</p>
+                    </div>
+                    <div class="packing-card">
+                        <i class="fas fa-camera-retro"></i>
+                        <h4>Máy ảnh / Điện thoại dung lượng cao</h4>
+                        <p>Từng ngóc ngách, từng chậu trầu bà hay bức tường vàng bong tróc cũng có thể tạo nên tuyệt tác
+                            nhiếp ảnh. Bạn sẽ bấm máy không ngừng nghỉ đấy.</p>
+                    </div>
+                    <div class="packing-card">
+                        <i class="fas fa-bicycle"></i>
+                        <h4>Trang phục đạp xe thoái mái</h4>
+                        <p>Thuê xe đạp lượn quanh các cánh đồng ngoại ô và rừng dừa ngập mặn sẽ khiến cơ thể nóng bức.
+                            Hãy ưu tiên đồ mát mẻ, thấm mồ hôi.</p>
+                    </div>
+                    <div class="packing-card">
+                        <i class="fas fa-heart"></i>
+                        <h4>Thuốc tiêu hóa</h4>
+                        <p>Ẩm thực miền Trung đậm vị chua cay và thường dùng nhiều dầu mỡ. Những ai có bụng yếu cần cẩn
+                            thận chuẩn bị thuốc hỗ trợ tiêu chuẩn.</p>
+                    </div>
+                </div>
+            </section>
 
-            <h2>Những địa điểm không thể bỏ lỡ</h2>
-            <ul>
-                <li><strong>Chùa Cầu:</strong> Biểu tượng của Hội An với kiến trúc Nhật Bản độc đáo, mái vòm cong mềm mại vắt qua lạch nước nhỏ.</li>
-                <li><strong>Nhà cổ Tấn Ký:</strong> Ngôi nhà hơn 200 năm tuổi, nơi từng là nơi ở của dòng tộc quý tộc họ Lê, kết hợp kiến trúc Trung - Nhật - Việt.</li>
-                <li><strong>Hội quán Phúc Kiến:</strong> Nơi thờ Thiên Hậu Thánh Mẫu, điểm đến tâm linh quan trọng của thương nhân người Hoa xưa.</li>
-                <li><strong>Chợ Hội An:</strong> Thiên đường ẩm thực sôi động, nơi bạn cảm nhận rõ nhất nhịp sống của người dân địa phương.</li>
-            </ul>
-
-            <img src="https://ik.imagekit.io/tvlk/blog/2022/08/pho-den-long-hoi-an-1.jpg" alt="Phố đèn lồng Hội An" class="content-img">
-
-            <h2>Trải nghiệm văn hóa & Ẩm thực</h2>
-            <p>Hội An không chỉ đẹp bởi kiến trúc mà còn quyến rũ bởi các hoạt động văn hóa. Bạn có thể thử ngồi thuyền thả đèn hoa đăng trên sông Hoài, tham gia chơi Bài Chòi hoặc đơn giản là dạo bước dưới những con phố đèn lồng lung linh về đêm.</p>
-            
-            <h3>Đặc sản nhất định phải thử</h3>
-            <p>Dạo quanh một vòng phố cổ, bạn không thể bỏ qua nền ẩm thực phong phú:</p>
-            <ul>
-                <li>Cao lầu (Quán Thanh, Quán Liên)</li>
-                <li>Cơm gà Hội An (Bà Buội, Bà Hương)</li>
-                <li>Bánh mì Phượng</li>
-                <li>Nước Mót thảo mộc</li>
-                <li>Bánh đập, hến xào, chè bắp...</li>
-            </ul>
         </div>
 
-        <aside class="sidebar">
-            <div class="info-card">
-                <h3>Thông tin chuyến đi</h3>
-                
+        <aside class="detail-sidebar">
+            <div class="sticky-card">
+                <h3 class="sidebar-title">Thông tin tóm tắt</h3>
+
                 <div class="info-item">
-                    <span class="info-label">📍 Địa điểm:</span>
-                    Hạ lưu sông Thu Bồn, Tỉnh Quảng Nam.
+                    <i class="fas fa-map-pin"></i>
+                    <div class="info-content">
+                        <h5>Vị trí địa lý</h5>
+                        <p>Hạ lưu sông Thu Bồn, Quảng Nam (cách sân bay Đà Nẵng ~30km). Khu vực bảo tồn phố cổ nằm ngay
+                            bên cạnh dòng chảy sông Hoài.</p>
+                    </div>
                 </div>
 
                 <div class="info-item">
-                    <span class="info-label">📅 Thời gian lý tưởng:</span>
-                    Tháng 2 - Tháng 8 (Thời tiết đẹp, ít mưa).
+                    <i class="fas fa-sun"></i>
+                    <div class="info-content">
+                        <h5>Mùa đẹp nhất (Khí hậu)</h5>
+                        <p>Tháng 2 - Tháng 8. Thời tiết khô ráo, ít mưa, nắng rực rỡ len qua từng kẽ lá rất hợp để đi
+                            dạo, đạp xe hay chèo Sup.</p>
+                    </div>
                 </div>
 
                 <div class="info-item">
-                    <span class="info-label">🏆 Danh hiệu:</span>
-                    Di sản văn hóa thế giới (UNESCO).
+                    <i class="fas fa-utensils"></i>
+                    <div class="info-content">
+                        <h5>Đặc sản phải thử</h5>
+                        <p>Cao Lầu chua ngọt, Mì Quảng tôm thịt, Bánh Mì Phượng trứ danh, Cơm Gà xé phay Bà Buội, và
+                            tuyệt phẩm Nước Mót sả chanh.</p>
+                    </div>
                 </div>
 
                 <div class="info-item">
-                    <span class="info-label">💰 Chi phí tham khảo:</span>
-                    <span class="price">1.500.000đ</span> /người
+                    <i class="fas fa-wallet"></i>
+                    <div class="info-content">
+                        <h5>Chi phí tham khảo</h5>
+                        <p>Khoảng 2.000.000đ - 3.500.000đ cho chuyến đi 3N2Đ (đã bao gồm ăn uống, khách sạn boutique
+                            trong phố cổ, và thuê cano ra đảo).</p>
+                    </div>
                 </div>
 
-                <a href="#" class="btn-book">ĐẶT TOUR NGAY</a>
-                <p style="margin-top:10px; font-size: 13px; color: #666; text-align: center;">*Ưu đãi mùa hè</p>
+                <div class="info-item">
+                    <i class="fas fa-plane"></i>
+                    <div class="info-content">
+                        <h5>Phương tiện khuyên dùng</h5>
+                        <p>Tiện nhất là đáp sân bay Đà Nẵng, sau đó thuê xe dịch vụ hoặc xe bus giá rẻ (chỉ khoảng
+                            30.000đ) để tới tận phố cổ.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="info-content">
+                        <h5>Mẹo / Lưu ý đặc biệt</h5>
+                        <p>Hội An có ngày rằm mỗi tháng (14 Âm lịch) tắt toàn bộ đèn điện, chỉ thắp lồng đèn. Bạn nên
+                            canh thời gian này để có trải nghiệm lung linh chưa từng thấy.</p>
+                    </div>
+                </div>
+
+                <button class="btn-primary" style="width: 100%; margin-top: 1rem; border-radius:12px;"
+                    onclick="window.location.href='planner.html'">
+                    Thêm vào kế hoạch chuyến đi <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
         </aside>
+    </main>
 
-    </div>
-
-    <footer>
-        &copy; 2026 Du lịch Việt Nam. Nội dung tổng hợp từ Daivietourist & Kinh nghiệm du lịch.
+    <footer
+        style="text-align: center; padding: 3rem 1.5rem; color: var(--text-muted); background: var(--bg-surface); opacity: 0.9;">
+        <p>&copy; 2026 Vietnam Travel - Nền tảng chia sẻ thông tin du lịch hàng đầu.</p>
     </footer>
-
 </body>
+
 </html>

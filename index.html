@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body>
+<body class="home-page">
 
   <nav>
     <div class="nav-logo">Vietnam Travel</div>
@@ -22,8 +22,10 @@
   <header class="hero">
     <div class="hero-content">
       <h1>Vẻ Đẹp Việt Nam</h1>
-      <p>Khám phá những danh lam thắng cảnh tuyệt vời nhất của đất nước hình chữ S.</p>
-      <a href="#destinations" class="btn-primary">Khám phá ngay</a>
+      <p>Khám phá những danh lam thắng cảnh tuyệt vời nhất của đất nước hình chữ S mang đậm đà bản sắc tự nhiên.</p>
+      <a href="#destinations" class="btn-primary">
+        Khám phá ngay &nbsp; <i class="fas fa-arrow-right"></i>
+      </a>
     </div>
   </header>
 
@@ -33,54 +35,78 @@
 
       <div class="destinations-grid">
         <!-- Card 1: Hạ Long -->
-        <article class="card">
+        <article class="card" onclick="window.location.href='halong.html'" style="cursor: pointer;">
           <div class="card-img-wrapper">
             <img src="assets/img/halong.jpeg" alt="Vịnh Hạ Long - Di sản thiên nhiên thế giới">
           </div>
           <div class="card-content">
-            <h3>Vịnh Hạ Long</h3>
+            <h3><i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> Vịnh Hạ Long</h3>
             <p>Di sản thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi kỳ vĩ và non nước hữu tình.</p>
           </div>
         </article>
 
         <!-- Card 2: Hội An -->
-        <article class="card">
+        <article class="card" onclick="window.location.href='hoian.html'" style="cursor: pointer;">
           <div class="card-img-wrapper">
             <img src="assets/img/hoian.jpg" alt="Phố cổ Hội An - Nét đẹp cổ kính">
           </div>
           <div class="card-content">
-            <h3>Phố cổ Hội An</h3>
+            <h3><i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> Phố cổ Hội An</h3>
             <p>Thành phố cổ kính với những ngôi nhà gỗ rêu phong, đèn lồng rực rỡ và ẩm thực đặc sắc.</p>
           </div>
         </article>
 
         <!-- Card 3: Sa Pa -->
-        <article class="card">
+        <article class="card" onclick="window.location.href='sapa.html'" style="cursor: pointer;">
           <div class="card-img-wrapper">
             <img src="assets/img/sapa.jpg" alt="Sa Pa - Thị trấn trong sương">
           </div>
           <div class="card-content">
-            <h3>Sa Pa</h3>
+            <h3><i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> Sa Pa</h3>
             <p>Thị trấn vùng cao nổi tiếng với ruộng bậc thang chín vàng, đỉnh Fansipan và khí hậu mát mẻ.</p>
           </div>
         </article>
 
         <!-- Card 4: Phú Quốc -->
-        <article class="card">
+        <article class="card" onclick="window.location.href='phuquoc.html'" style="cursor: pointer;">
           <div class="card-img-wrapper">
             <img src="assets/img/phuquoc.avif" alt="Phú Quốc - Đảo Ngọc">
           </div>
           <div class="card-content">
-            <h3>Phú Quốc</h3>
+            <h3><i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> Phú Quốc</h3>
             <p>Hòn đảo ngọc với bãi biển cát trắng nước trong xanh, resort sang trọng và hải sản phong phú.</p>
+          </div>
+        </article>
+
+        <!-- Card 5: Đà Nẵng -->
+        <article class="card" onclick="window.location.href='danang.html'" style="cursor: pointer;">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1559592413-7ce820bdec40?q=80&w=1000&auto=format&fit=crop"
+              alt="Đà Nẵng - Thành phố đáng sống">
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> Đà Nẵng</h3>
+            <p>Thành phố của những cây cầu, bãi biển Mỹ Khê tuyệt đẹp và danh thắng Ngũ Hành Sơn hùng vĩ.</p>
+          </div>
+        </article>
+
+        <!-- Card 6: Ninh Bình -->
+        <article class="card" onclick="window.location.href='ninhbinh.html'" style="cursor: pointer;">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1655097480572-8d77c7bfa6d9?q=80&w=1000&auto=format&fit=crop"
+              alt="Ninh Bình - Vịnh Hạ Long trên cạn">
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> Ninh Bình</h3>
+            <p>Vẻ đẹp non nước hữu tình của Tràng An, Tam Cốc và Hang Múa với những dãy núi đá vôi đồ sộ.</p>
           </div>
         </article>
       </div>
     </section>
 
     <section id="contact" class="contact-section">
-      <h2 class="section-title">Liên Hệ Tư Vấn</h2>
-      <p>Để lại thông tin để nhận tư vấn lịch trình chi tiết và ưu đãi hấp dẫn.</p>
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">Liên Hệ Tư Vấn</h2>
+      <p>Để lại thông tin để nhận tư vấn lịch trình chi tiết và ưu đãi hấp dẫn ngay hôm nay.</p>
 
       <form class="contact-form">
         <div class="form-group">
@@ -96,14 +122,15 @@
             required></textarea>
         </div>
 
-        <button type="submit" class="btn-submit">Gửi thông tin</button>
+        <button type="submit" class="btn-submit">Gửi thông tin &nbsp; <i class="fas fa-paper-plane"></i></button>
       </form>
     </section>
   </main>
 
-  <footer style="text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem;">
+  <footer>
     <p>&copy; 2026 Vietnam Travel - Designed with ❤️ by Team Sivi</p>
   </footer>
+
 </body>
 
 </html>
