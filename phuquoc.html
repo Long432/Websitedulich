@@ -1,266 +1,414 @@
 <!DOCTYPE html>
 <html lang="vi">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khám phá Đảo Ngọc Phú Quốc | Vietnam Travel</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-
-<body class="phuquoc-page">
-    <nav>
-        <div class="nav-logo">Vietnam Travel</div>
-        <div class="nav-links">
-            <a href="index.html">Trang chủ</a>
-            <a href="planner.html">Lập kế hoạch</a>
-        </div>
-    </nav>
-
-    <header class="detail-hero" style="background-image: url('assets/img/phuquoc.avif');">
-        <div class="detail-hero-content">
-            <h1>Phú Quốc - Đảo Ngọc</h1>
-            <p>Hòn đảo ngọc với bãi biển cát trắng tinh như pha lê bóng bẩy, rặng san hô tuyệt đẹp và các tổ hợp du lịch
-                giải trí số 1 Châu Á.</p>
-        </div>
-    </header>
-
-    <main class="detail-container">
-        <div class="detail-main">
-            <!-- 1. Giới thiệu -->
-            <section class="detail-section">
-                <h2><i class="fas fa-info-circle"></i> Giới thiệu chung</h2>
-                <p>Thuộc tỉnh Kiên Giang, Phú Quốc là hòn đảo lớn nhất Việt Nam nằm độc lập ngay giữa vùng Vịnh Thái Lan
-                    mênh mông bão táp xa bờ. Phải trải nghiệm thực tế với màu xanh của biển cả đến tận những hạt cát
-                    trắng như ngọc bích nơi đây, bạn mới có thể hiểu tại sao lại gắn mác "Đảo Ngọc". Nó không khác gì
-                    với các thành phố bãi biển ở Địa Trung Hải thu nhỏ.</p>
-                <p>Điều chinh phục du khách bởi Phú Quốc là sự trộn lẫn đan xen giữa "Rừng" nguyên sinh và "Biển" bao
-                    la. Nơi bảo tồn những cánh Vườn quốc gia trải rộng che chở bao sinh vật, kết hợp cùng biển xanh
-                    trong vắt tận đáy ở các khu vực Bãi Sao, Bãi Khem.</p>
-                <p>Thành tựu khiến Đảo Ngọc vươn tầm châu lục không chỉ là tạo hóa. Phú Quốc ngày càng cho thấy hình ảnh
-                    của một "thủ phủ giải trí không khép mắt", với hàng loạt các hoạt động sôi động như VinWonders, quy
-                    mô vườn thú thả tự nhiên cực đại Safari, và quần thể Sunset Town đẹp lạ ngất ngây vào lúc chiều tà.
-                </p>
-                <p>Thành phố trên vùng đảo biệt lập là một sự lựa chọn tuyệt vời vừa đáp ứng cho những ai yêu thích hòa
-                    mình vào thiên nhiên, nghỉ dưỡng cao cấp ở resort với hồ bơi riêng biệt tĩnh lặng, hay thậm chí để
-                    lướt ván nhấp nhô lặn với ống thở, khám phá muôn loài san hô rực rỡ và đắp lên người một làn da mặn
-                    mà của bãi biển lộng gió.</p>
-            </section>
-
-            <!-- 2. Gợi ý lịch trình -->
-            <section class="detail-section">
-                <h2><i class="fas fa-calendar-alt"></i> Gợi ý Lịch trình 4 Ngày 3 Đêm Khám Phá Nam & Bắc Đảo</h2>
-                <div class="itinerary-list">
-                    <div class="itinerary-item">
-                        <h4>Ngày 1: Lạc vào Thế giới Bắc Đảo</h4>
-                        <p><strong>Sáng:</strong> Khám phá Vinpearl Safari - Vườn thú bán hoang dã đầu tiên tại VN bằng
-                            xe bus rào bảo vệ.<br>
-                            <strong>Chiều:</strong> Chơi tung tăng tại VinWonders: thủy cung The Sea Shell, công viên
-                            nước, trò chơi cảm giác mạnh.<br>
-                            <strong>Tối:</strong> Khám phá Dinh Cậu - chợ đêm Dương Đông. Thưởng thức bún quậy, hải sản
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Kh&aacute;m ph&aacute; &Dstrok;ảo Ngọc Ph&uacute; Quốc | Vietnam Travel
+  </title>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="assets/css/modal.css" rel="stylesheet"/>
+ </head>
+ <body class="phuquoc-page">
+  <nav>
+   <div class="nav-logo">
+    Vietnam Travel
+   </div>
+   <div class="nav-links">
+    <a href="index.html">
+     Trang chủ
+    </a>
+    <a href="planner.html">
+     Lập kế hoạch
+    </a>
+   </div>
+  </nav>
+  <header class="detail-hero" style="background-image: url('assets/img/phuquoc.avif');">
+   <div class="detail-hero-content">
+    <h1>
+     Ph&uacute; Quốc - &Dstrok;ảo Ngọc
+    </h1>
+    <p>
+     H&ograve;n &dstrok;ảo ngọc với b&atilde;i biển c&aacute;t trắng tinh như pha l&ecirc; b&oacute;ng bẩy, rặng san h&ocirc; tuyệt &dstrok;ẹp v&agrave; c&aacute;c tổ hợp du lịch
+                giải tr&iacute; số 1 Ch&acirc;u &Aacute;.
+    </p>
+   </div>
+  </header>
+  <main class="detail-container">
+   <div class="detail-main">
+    <!-- 1. Giới thiệu -->
+    <section class="detail-section">
+     <h2>
+      <i class="fas fa-info-circle">
+      </i>
+      Giới thiệu chung
+     </h2>
+     <p>
+      Thuộc tỉnh Ki&ecirc;n Giang, Ph&uacute; Quốc l&agrave; h&ograve;n &dstrok;ảo lớn nhất Việt Nam nằm &dstrok;ộc lập ngay giữa v&ugrave;ng Vịnh Th&aacute;i Lan
+                    m&ecirc;nh m&ocirc;ng b&atilde;o t&aacute;p xa bờ. Phải trải nghiệm thực tế với m&agrave;u xanh của biển cả &dstrok;ến tận những hạt c&aacute;t
+                    trắng như ngọc b&iacute;ch nơi &dstrok;&acirc;y, bạn mới c&oacute; thể hiểu tại sao lại gắn m&aacute;c "&Dstrok;ảo Ngọc". N&oacute; kh&ocirc;ng kh&aacute;c g&igrave;
+                    với c&aacute;c th&agrave;nh phố b&atilde;i biển ở &Dstrok;ịa Trung Hải thu nhỏ.
+     </p>
+     <p>
+      &Dstrok;iều chinh phục du kh&aacute;ch bởi Ph&uacute; Quốc l&agrave; sự trộn lẫn &dstrok;an xen giữa "Rừng" nguy&ecirc;n sinh v&agrave; "Biển" bao
+                    la. Nơi bảo tồn những c&aacute;nh Vườn quốc gia trải rộng che chở bao sinh vật, kết hợp c&ugrave;ng biển xanh
+                    trong vắt tận &dstrok;&aacute;y ở c&aacute;c khu vực B&atilde;i Sao, B&atilde;i Khem.
+     </p>
+     <p>
+      Th&agrave;nh tựu khiến &Dstrok;ảo Ngọc vươn tầm ch&acirc;u lục kh&ocirc;ng chỉ l&agrave; tạo h&oacute;a. Ph&uacute; Quốc ng&agrave;y c&agrave;ng cho thấy h&igrave;nh ảnh
+                    của một "thủ phủ giải tr&iacute; kh&ocirc;ng kh&eacute;p mắt", với h&agrave;ng loạt c&aacute;c hoạt &dstrok;ộng s&ocirc;i &dstrok;ộng như VinWonders, quy
+                    m&ocirc; vườn th&uacute; thả tự nhi&ecirc;n cực &dstrok;ại Safari, v&agrave; quần thể Sunset Town &dstrok;ẹp lạ ngất ng&acirc;y v&agrave;o l&uacute;c chiều t&agrave;.
+     </p>
+     <p>
+      Th&agrave;nh phố tr&ecirc;n v&ugrave;ng &dstrok;ảo biệt lập l&agrave; một sự lựa chọn tuyệt vời vừa &dstrok;&aacute;p ứng cho những ai y&ecirc;u th&iacute;ch h&ograve;a
+                    m&igrave;nh v&agrave;o thi&ecirc;n nhi&ecirc;n, nghỉ dưỡng cao cấp ở resort với hồ bơi ri&ecirc;ng biệt t&itilde;nh lặng, hay thậm ch&iacute; &dstrok;ể
+                    lướt v&aacute;n nhấp nh&ocirc; lặn với ống thở, kh&aacute;m ph&aacute; mu&ocirc;n lo&agrave;i san h&ocirc; rực rỡ v&agrave; &dstrok;ắp l&ecirc;n người một l&agrave;n da mặn
+                    m&agrave; của b&atilde;i biển lộng gi&oacute;.
+     </p>
+    </section>
+    <!-- 2. Gợi ý lịch trình -->
+    <section class="detail-section">
+     <h2>
+      <i class="fas fa-calendar-alt">
+      </i>
+      Gợi &yacute; Lịch tr&igrave;nh 4 Ng&agrave;y 3 &Dstrok;&ecirc;m Kh&aacute;m Ph&aacute; Nam &amp; Bắc &Dstrok;ảo
+     </h2>
+     <div class="itinerary-list">
+      <div class="itinerary-item">
+       <h4>
+        Ng&agrave;y 1: Lạc v&agrave;o Thế giới Bắc &Dstrok;ảo
+       </h4>
+       <p>
+        <strong>
+         S&aacute;ng:
+        </strong>
+        Kh&aacute;m ph&aacute; Vinpearl Safari - Vườn th&uacute; b&aacute;n hoang d&atilde; &dstrok;ầu ti&ecirc;n tại VN bằng
+                            xe bus r&agrave;o bảo vệ.
+        <br/>
+        <strong>
+         Chiều:
+        </strong>
+        Chơi tung t&abreve;ng tại VinWonders: thủy cung The Sea Shell, c&ocirc;ng vi&ecirc;n
+                            nước, tr&ograve; chơi cảm gi&aacute;c mạnh.
+        <br/>
+        <strong>
+         Tối:
+        </strong>
+        Kh&aacute;m ph&aacute; Dinh Cậu - chợ &dstrok;&ecirc;m Dương &Dstrok;&ocirc;ng. Thưởng thức b&uacute;n quậy, hải sản
                             nướng.
-                        </p>
-                    </div>
-                    <div class="itinerary-item">
-                        <h4>Ngày 2: Lặn ngắm San Hô ở Nam Đảo</h4>
-                        <p><strong>Sáng:</strong> Kéo vali về khu vực Nam Đảo. Tham quan cơ sở ngọc trai, nhà thùng nước
-                            mắm, vườn tiêu Ngọc Hà.<br>
-                            <strong>Chiều:</strong> Lên cano làm chuyến 4 đảo (Hòn Móng Tay, Gầm Ghì, Mây Rút), lặn ngắm
-                            san hô thiên nhiên, chụp ảnh bay Flycam ván Sup cực ảo diệu trên mặt biển trong suốt.<br>
-                            <strong>Tối:</strong> Di chuyển đến Thị trấn Hoàng Hôn, ngắm biểu tượng rực rỡ của Cầu Hôn
-                            (Kiss Bridge) và xem show diễn laze nổ tung bầu trời Kiss Of The Sea.
-                        </p>
-                    </div>
-                    <div class="itinerary-item">
-                        <h4>Ngày 3: Phóng tầm mắt cùng Cáp treo Vượt Biển</h4>
-                        <p><strong>Sáng:</strong> Mua vé lên tuyến Cáp treo 3 dây vượt biển dài nhất thế giới để đến với
-                            Đảo Hòn Thơm.<br>
-                            <strong>Chiều:</strong> Bung xõa ở công viên nước Aquatopia đẳng cấp 5 sao, thư giãn ở bãi
-                            tắm Hòn Thơm hoặc sử dụng buffet đặc biệt nướng hải sản.<br>
-                            <strong>Tối:</strong> Xách xe dạo quanh các quán Bar, Pub ở khu vực Grand World để tận hưởng
-                            thành phố không ngủ.
-                        </p>
-                    </div>
-                    <div class="itinerary-item">
-                        <h4>Ngày 4: Chill Nghỉ dưỡng và Bay về</h4>
-                        <p><strong>Sáng:</strong> Tắm biển bãi Sao cực trong xanh hoang sơ cát trắng mịn như kem, lên
-                            xích đu cây dừa ven biển chụp những tấm hình nhiệt đới triệu like.<br>
-                            <strong>Trưa:</strong> Thưởng thức các món liên quan tới Còi biên mai Phú Quốc, nhum nướng
-                            mỡ hành.<br>
-                            <strong>Chiều:</strong> Mua quà lưu niệm các loại (hạt tiêu sim, kẹo sim, rượu sim). Di
-                            chuyển ra lại sân bay Phú Quốc để về vùng đất liền, ôm trọn vị biển mặn mòi.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 3. Những nơi xung quanh nên đi -->
-            <section class="detail-section">
-                <h2><i class="fas fa-map-signs"></i> Gợi ý các điểm tham quan liên quan</h2>
-                <p>Thiên đường biển tại Vịnh Thái Lan không hề thiếu những địa điểm chụp ảnh check-in trải dài từ Bắc
-                    chí Nam:</p>
-                <div class="suggested-grid">
-                    <div class="suggested-card">
-                        <img src="https://images.unsplash.com/photo-1596404754792-7f5ccbb606f2?q=80&w=500&auto=format&fit=crop"
-                            alt="Sun World">
-                        <div class="suggested-card-overlay">
-                            <h4>Thị trấn Hoàng Hôn Sunset Town</h4>
-                        </div>
-                    </div>
-                    <div class="suggested-card">
-                        <img src="https://images.unsplash.com/photo-1628126235206-5260b9ea6441?q=80&w=500&auto=format&fit=crop"
-                            alt="Vinpearl">
-                        <div class="suggested-card-overlay">
-                            <h4>Thành phố Venice trong lòng Grand World</h4>
-                        </div>
-                    </div>
-                    <div class="suggested-card">
-                        <img src="https://images.unsplash.com/photo-1579201990499-56fb0ea6add5?q=80&w=500&auto=format&fit=crop"
-                            alt="Biển Khơi">
-                        <div class="suggested-card-overlay">
-                            <h4>Nhà tù Côn Đảo Phú Quốc</h4>
-                        </div>
-                    </div>
-                    <div class="suggested-card">
-                        <img src="https://images.unsplash.com/photo-1583417316335-9f5b2daefc0b?q=80&w=500&auto=format&fit=crop"
-                            alt="Bãi Sao">
-                        <div class="suggested-card-overlay">
-                            <h4>Vút Xích đu tiên tại Bãi Sao mát lạnh</h4>
-                        </div>
-                    </div>
-                    <div class="suggested-card">
-                        <img src="https://images.unsplash.com/photo-1563214820-22c97aee410b?q=80&w=500&auto=format&fit=crop"
-                            alt="Hòn Thơm">
-                        <div class="suggested-card-overlay">
-                            <h4>Băng vịnh bằng Cáp Treo Hòn Thơm</h4>
-                        </div>
-                    </div>
-                    <div class="suggested-card">
-                        <img src="https://images.unsplash.com/photo-1558223608-f463cc1ba0ca?q=80&w=500&auto=format&fit=crop"
-                            alt="Cầu Hôn">
-                        <div class="suggested-card-overlay">
-                            <h4>Tuyệt tác nghệ thuật Kiss Bridge</h4>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 4. Đồ dùng cần chuẩn bị -->
-            <section class="detail-section">
-                <h2><i class="fas fa-suitcase-rolling"></i> Đồ dùng nên chuẩn bị</h2>
-                <div class="packing-grid">
-                    <div class="packing-card">
-                        <i class="fas fa-swimsuit"></i>
-                        <h4>Đồ bơi Sexy & Áo phao cá nhân</h4>
-                        <p>Tuy dịch vụ cano luôn có sẵn, nhưng nếu thích tự do và ưa lặn bạn hoàn toàn nên mang phao cổ
-                            bơi để check-in dễ nhất!</p>
-                    </div>
-                    <div class="packing-card">
-                        <i class="fas fa-sun"></i>
-                        <h4>Kem chống nắng Max SPF (Nắp xịt)</h4>
-                        <p>Hãy lập tức bảo vệ ngay làn da của bạn cực kì tối đa vì bức xạ tia UV tại Phú Quốc rất gắt
-                            khi lướt thuyền giữa đại dương rực tủa.</p>
-                    </div>
-                    <div class="packing-card">
-                        <i class="fas fa-glasses"></i>
-                        <h4>Kính râm Phân cực & Mũ rộng vành</h4>
-                        <p>Người bạn không bao giờ có thể thiếu nếu bạn muốn sống ảo cực cool ngầu ngay trên rạn san hô,
-                            lộng gió và lấp lánh chói chang.</p>
-                    </div>
-                    <div class="packing-card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>Túi Nilon Chống Nước Thiết Bị</h4>
-                        <p>Sóng đánh cano rất thường xuyên văng ướt hoàn toàn điện thoại của bạn trên thuyền. Phải có
-                            lớp bọc chắc chắn mới nên dùng.</p>
-                    </div>
-                    <div class="packing-card">
-                        <i class="fas fa-tshirt"></i>
-                        <h4>Váy Maxi Dạ Hội Dài Thướt Tha</h4>
-                        <p>Màu đặc trưng của Sunset Town là vàng địa trung hải hay quảng trường La Mã. Màu váy Maxi sáng
-                            bừng lên sẽ mang lại view hàng hiệu.</p>
-                    </div>
-                    <div class="packing-card">
-                        <i class="fas fa-mask"></i>
-                        <h4>Kính bơi và Ống Thở Lặn Gần</h4>
-                        <p>Góc Gầm Ghì là vương quốc San hô dưới các độ sâu chỉ hơn mét nước, tự bơi lặn quan sát chúng
-                            tự nhiên là điều sung sướng tột độ.</p>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-
-        <aside class="detail-sidebar">
-            <div class="sticky-card">
-                <h3 class="sidebar-title">Thông tin tóm tắt</h3>
-
-                <div class="info-item">
-                    <i class="fas fa-map-pin"></i>
-                    <div class="info-content">
-                        <h5>Vị trí địa lý</h5>
-                        <p>Nằm ngoài khơi thuộc cực Vịnh Thái Lan. Tên địa phương thuộc Thành phố Đảo Phú Quốc, Tỉnh
-                            Kiên Giang.</p>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <i class="fas fa-sun"></i>
-                    <div class="info-content">
-                        <h5>Mùa đẹp nhất (Khí hậu)</h5>
-                        <p>Từ Tháng 10 đến cuối T4. Biển hoàn toàn sóng nhẹ dịu ngọt, rạn san hô sinh động ngập tràn màu
-                            sắc, mây trời rực rỡ không mưa do mùa khô.</p>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <i class="fas fa-utensils"></i>
-                    <div class="info-content">
-                        <h5>Đặc sản phải thử</h5>
-                        <p>Bún quậy Kiến Xây trứ danh, Nhum biển nướng mỡ hành đập trứng, Ghẹ luộc Hàm Ninh giòn rụm
-                            ngọt lịm, và Nước mắm cá cơm Phú Quốc đượm vị.</p>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <i class="fas fa-wallet"></i>
-                    <div class="info-content">
-                        <h5>Chi phí tham khảo</h5>
-                        <p>4.000.000đ - 7.000.000đ do các khu quần thể vui chơi quy mô của Vin hay Sun World giá trị vé
-                            khá đắt đỏ, nhưng tiền nào của đó.</p>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <i class="fas fa-plane"></i>
-                    <div class="info-content">
-                        <h5>Phương tiện di chuyển</h5>
-                        <p>Gần như 100% bằng bay thẳng do Phú Quốc có càng Hàng không Quốc Tế với đủ chặng trong và
-                            ngoài nước cực thuận lợi (Tầm 1 tiếng rưỡi bay).</p>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <div class="info-content">
-                        <h5>Mẹo / Lưu ý đặc biệt</h5>
-                        <p>Bắc Đảo và Nam Đảo cách bờ nhau khá xa trên 50km đường, nên quy hoạch lịch trình gom cụm rõ
-                            mỗi ngày đi một khu vực để không mất quá tải sức lực.</p>
-                    </div>
-                </div>
-
-                <button class="btn-primary" style="width: 100%; margin-top: 1rem; border-radius:12px;"
-                    onclick="window.location.href='planner.html'">
-                    Thêm vào kế hoạch chuyến đi <i class="fas fa-arrow-right"></i>
-                </button>
-            </div>
-        </aside>
-    </main>
-
-    <footer
-        style="text-align: center; padding: 3rem 1.5rem; color: var(--text-muted); background: var(--bg-surface); opacity: 0.9;">
-        <p>&copy; 2026 Vietnam Travel - Nền tảng chia sẻ thông tin du lịch hàng đầu.</p>
-    </footer>
-</body>
-
+       </p>
+      </div>
+      <div class="itinerary-item">
+       <h4>
+        Ng&agrave;y 2: Lặn ngắm San H&ocirc; ở Nam &Dstrok;ảo
+       </h4>
+       <p>
+        <strong>
+         S&aacute;ng:
+        </strong>
+        K&eacute;o vali về khu vực Nam &Dstrok;ảo. Tham quan cơ sở ngọc trai, nh&agrave; th&ugrave;ng nước
+                            mắm, vườn ti&ecirc;u Ngọc H&agrave;.
+        <br/>
+        <strong>
+         Chiều:
+        </strong>
+        L&ecirc;n cano l&agrave;m chuyến 4 &dstrok;ảo (H&ograve;n M&oacute;ng Tay, Gầm Gh&igrave;, M&acirc;y R&uacute;t), lặn ngắm
+                            san h&ocirc; thi&ecirc;n nhi&ecirc;n, chụp ảnh bay Flycam v&aacute;n Sup cực ảo diệu tr&ecirc;n mặt biển trong suốt.
+        <br/>
+        <strong>
+         Tối:
+        </strong>
+        Di chuyển &dstrok;ến Thị trấn Ho&agrave;ng H&ocirc;n, ngắm biểu tượng rực rỡ của Cầu H&ocirc;n
+                            (Kiss Bridge) v&agrave; xem show diễn laze nổ tung bầu trời Kiss Of The Sea.
+       </p>
+      </div>
+      <div class="itinerary-item">
+       <h4>
+        Ng&agrave;y 3: Ph&oacute;ng tầm mắt c&ugrave;ng C&aacute;p treo Vượt Biển
+       </h4>
+       <p>
+        <strong>
+         S&aacute;ng:
+        </strong>
+        Mua v&eacute; l&ecirc;n tuyến C&aacute;p treo 3 d&acirc;y vượt biển d&agrave;i nhất thế giới &dstrok;ể &dstrok;ến với
+                            &Dstrok;ảo H&ograve;n Thơm.
+        <br/>
+        <strong>
+         Chiều:
+        </strong>
+        Bung x&otilde;a ở c&ocirc;ng vi&ecirc;n nước Aquatopia &dstrok;ẳng cấp 5 sao, thư gi&atilde;n ở b&atilde;i
+                            tắm H&ograve;n Thơm hoặc sử dụng buffet &dstrok;ặc biệt nướng hải sản.
+        <br/>
+        <strong>
+         Tối:
+        </strong>
+        X&aacute;ch xe dạo quanh c&aacute;c qu&aacute;n Bar, Pub ở khu vực Grand World &dstrok;ể tận hưởng
+                            th&agrave;nh phố kh&ocirc;ng ngủ.
+       </p>
+      </div>
+      <div class="itinerary-item">
+       <h4>
+        Ng&agrave;y 4: Chill Nghỉ dưỡng v&agrave; Bay về
+       </h4>
+       <p>
+        <strong>
+         S&aacute;ng:
+        </strong>
+        Tắm biển b&atilde;i Sao cực trong xanh hoang sơ c&aacute;t trắng mịn như kem, l&ecirc;n
+                            x&iacute;ch &dstrok;u c&acirc;y dừa ven biển chụp những tấm h&igrave;nh nhiệt &dstrok;ới triệu like.
+        <br/>
+        <strong>
+         Trưa:
+        </strong>
+        Thưởng thức c&aacute;c m&oacute;n li&ecirc;n quan tới C&ograve;i bi&ecirc;n mai Ph&uacute; Quốc, nhum nướng
+                            mỡ h&agrave;nh.
+        <br/>
+        <strong>
+         Chiều:
+        </strong>
+        Mua qu&agrave; lưu niệm c&aacute;c loại (hạt ti&ecirc;u sim, kẹo sim, rượu sim). Di
+                            chuyển ra lại s&acirc;n bay Ph&uacute; Quốc &dstrok;ể về v&ugrave;ng &dstrok;ất liền, &ocirc;m trọn vị biển mặn m&ograve;i.
+       </p>
+      </div>
+     </div>
+    </section>
+    <!-- 3. Những nơi xung quanh nên đi -->
+    <section class="detail-section">
+     <h2>
+      <i class="fas fa-map-signs">
+      </i>
+      Gợi &yacute; c&aacute;c &dstrok;iểm tham quan li&ecirc;n quan
+     </h2>
+     <p>
+      Thi&ecirc;n &dstrok;ường biển tại Vịnh Th&aacute;i Lan kh&ocirc;ng hề thiếu những &dstrok;ịa &dstrok;iểm chụp ảnh check-in trải d&agrave;i từ Bắc
+                    ch&iacute; Nam:
+     </p>
+     <div class="suggested-grid">
+      <div class="suggested-card" data-adv="🌟 SI&Ecirc;U HOT: Thị trấn Ho&agrave;ng H&ocirc;n Sunset Town &dstrok;ang l&agrave; &dstrok;iểm &dstrok;ến &dstrok;ược s&abreve;n &dstrok;&oacute;n nhất!" data-desc='Bạn kh&ocirc;ng thể bỏ lỡ Thị trấn Ho&agrave;ng H&ocirc;n Sunset Town khi tới &dstrok;&acirc;y! &Dstrok;&acirc;y l&agrave; một &dstrok;iểm sinh th&aacute;i, check-in v&ocirc; c&ugrave;ng hấp dẫn với vẻ &dstrok;ẹp &dstrok;ộc &dstrok;&aacute;o. Tham quan nơi &dstrok;&acirc;y, bạn sẽ bị cuốn h&uacute;t bởi những khung cảnh lộng lẫy, kh&ocirc;ng gian kho&aacute;ng &dstrok;ạt v&agrave; nền v&abreve;n ho&aacute; &dstrok;ặc sắc. V&ocirc; v&agrave;n g&oacute;c m&aacute;y sống ảo "kh&ocirc;ng g&oacute;c chết" v&agrave; những trải nghiệm thực tế kh&oacute; qu&ecirc;n &dstrok;ang chờ &dstrok;&oacute;n bạn.' data-img="https://image.pollinations.ai/prompt/Th%E1%BB%8B%20tr%E1%BA%A5n%20Ho%C3%A0ng%20H%C3%B4n%20Sunset%20Town%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true" data-time="Lịch tr&igrave;nh l&yacute; tưởng: Nh&acirc;m nhi vẻ &dstrok;ẹp v&agrave;o S&aacute;ng Ng&agrave;y 1." data-title="Thị trấn Ho&agrave;ng H&ocirc;n Sunset Town" onclick="openTourModal(this)" style="cursor: pointer;">
+       <img alt="Sun World" src="https://image.pollinations.ai/prompt/Th%E1%BB%8B%20tr%E1%BA%A5n%20Ho%C3%A0ng%20H%C3%B4n%20Sunset%20Town%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true"/>
+       <div class="suggested-card-overlay">
+        <h4>
+         Thị trấn Ho&agrave;ng H&ocirc;n Sunset Town
+        </h4>
+       </div>
+      </div>
+      <div class="suggested-card" data-adv="🌟 SI&Ecirc;U HOT: Th&agrave;nh phố Venice trong l&ograve;ng Grand World &dstrok;ang l&agrave; &dstrok;iểm &dstrok;ến &dstrok;ược s&abreve;n &dstrok;&oacute;n nhất!" data-desc='Bạn kh&ocirc;ng thể bỏ lỡ Th&agrave;nh phố Venice trong l&ograve;ng Grand World khi tới &dstrok;&acirc;y! &Dstrok;&acirc;y l&agrave; một &dstrok;iểm sinh th&aacute;i, check-in v&ocirc; c&ugrave;ng hấp dẫn với vẻ &dstrok;ẹp &dstrok;ộc &dstrok;&aacute;o. Tham quan nơi &dstrok;&acirc;y, bạn sẽ bị cuốn h&uacute;t bởi những khung cảnh lộng lẫy, kh&ocirc;ng gian kho&aacute;ng &dstrok;ạt v&agrave; nền v&abreve;n ho&aacute; &dstrok;ặc sắc. V&ocirc; v&agrave;n g&oacute;c m&aacute;y sống ảo "kh&ocirc;ng g&oacute;c chết" v&agrave; những trải nghiệm thực tế kh&oacute; qu&ecirc;n &dstrok;ang chờ &dstrok;&oacute;n bạn.' data-img="https://image.pollinations.ai/prompt/Th%C3%A0nh%20ph%E1%BB%91%20Venice%20trong%20l%C3%B2ng%20Grand%20World%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true" data-time="Lịch tr&igrave;nh l&yacute; tưởng: Nh&acirc;m nhi vẻ &dstrok;ẹp v&agrave;o Chiều Ng&agrave;y 1." data-title="Th&agrave;nh phố Venice trong l&ograve;ng Grand World" onclick="openTourModal(this)" style="cursor: pointer;">
+       <img alt="Vinpearl" src="https://image.pollinations.ai/prompt/Th%C3%A0nh%20ph%E1%BB%91%20Venice%20trong%20l%C3%B2ng%20Grand%20World%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true"/>
+       <div class="suggested-card-overlay">
+        <h4>
+         Th&agrave;nh phố Venice trong l&ograve;ng Grand World
+        </h4>
+       </div>
+      </div>
+      <div class="suggested-card" data-adv="🌟 SI&Ecirc;U HOT: Nh&agrave; t&ugrave; C&ocirc;n &Dstrok;ảo Ph&uacute; Quốc &dstrok;ang l&agrave; &dstrok;iểm &dstrok;ến &dstrok;ược s&abreve;n &dstrok;&oacute;n nhất!" data-desc='Bạn kh&ocirc;ng thể bỏ lỡ Nh&agrave; t&ugrave; C&ocirc;n &Dstrok;ảo Ph&uacute; Quốc khi tới &dstrok;&acirc;y! &Dstrok;&acirc;y l&agrave; một &dstrok;iểm sinh th&aacute;i, check-in v&ocirc; c&ugrave;ng hấp dẫn với vẻ &dstrok;ẹp &dstrok;ộc &dstrok;&aacute;o. Tham quan nơi &dstrok;&acirc;y, bạn sẽ bị cuốn h&uacute;t bởi những khung cảnh lộng lẫy, kh&ocirc;ng gian kho&aacute;ng &dstrok;ạt v&agrave; nền v&abreve;n ho&aacute; &dstrok;ặc sắc. V&ocirc; v&agrave;n g&oacute;c m&aacute;y sống ảo "kh&ocirc;ng g&oacute;c chết" v&agrave; những trải nghiệm thực tế kh&oacute; qu&ecirc;n &dstrok;ang chờ &dstrok;&oacute;n bạn.' data-img="https://image.pollinations.ai/prompt/Nh%C3%A0%20t%C3%B9%20C%C3%B4n%20%C4%90%E1%BA%A3o%20Ph%C3%BA%20Qu%E1%BB%91c%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true" data-time="Lịch tr&igrave;nh l&yacute; tưởng: Nh&acirc;m nhi vẻ &dstrok;ẹp v&agrave;o S&aacute;ng Ng&agrave;y 2." data-title="Nh&agrave; t&ugrave; C&ocirc;n &Dstrok;ảo Ph&uacute; Quốc" onclick="openTourModal(this)" style="cursor: pointer;">
+       <img alt="Biển Khơi" src="https://image.pollinations.ai/prompt/Nh%C3%A0%20t%C3%B9%20C%C3%B4n%20%C4%90%E1%BA%A3o%20Ph%C3%BA%20Qu%E1%BB%91c%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true"/>
+       <div class="suggested-card-overlay">
+        <h4>
+         Nh&agrave; t&ugrave; C&ocirc;n &Dstrok;ảo Ph&uacute; Quốc
+        </h4>
+       </div>
+      </div>
+      <div class="suggested-card" data-adv="🌟 SI&Ecirc;U HOT: V&uacute;t X&iacute;ch &dstrok;u ti&ecirc;n tại B&atilde;i Sao m&aacute;t lạnh &dstrok;ang l&agrave; &dstrok;iểm &dstrok;ến &dstrok;ược s&abreve;n &dstrok;&oacute;n nhất!" data-desc='Bạn kh&ocirc;ng thể bỏ lỡ V&uacute;t X&iacute;ch &dstrok;u ti&ecirc;n tại B&atilde;i Sao m&aacute;t lạnh khi tới &dstrok;&acirc;y! &Dstrok;&acirc;y l&agrave; một &dstrok;iểm sinh th&aacute;i, check-in v&ocirc; c&ugrave;ng hấp dẫn với vẻ &dstrok;ẹp &dstrok;ộc &dstrok;&aacute;o. Tham quan nơi &dstrok;&acirc;y, bạn sẽ bị cuốn h&uacute;t bởi những khung cảnh lộng lẫy, kh&ocirc;ng gian kho&aacute;ng &dstrok;ạt v&agrave; nền v&abreve;n ho&aacute; &dstrok;ặc sắc. V&ocirc; v&agrave;n g&oacute;c m&aacute;y sống ảo "kh&ocirc;ng g&oacute;c chết" v&agrave; những trải nghiệm thực tế kh&oacute; qu&ecirc;n &dstrok;ang chờ &dstrok;&oacute;n bạn.' data-img="https://image.pollinations.ai/prompt/V%C3%BAt%20X%C3%ADch%20%C4%91u%20ti%C3%AAn%20t%E1%BA%A1i%20B%C3%A3i%20Sao%20m%C3%A1t%20l%E1%BA%A1nh%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true" data-time="Lịch tr&igrave;nh l&yacute; tưởng: Nh&acirc;m nhi vẻ &dstrok;ẹp v&agrave;o Chiều Ng&agrave;y 2." data-title="V&uacute;t X&iacute;ch &dstrok;u ti&ecirc;n tại B&atilde;i Sao m&aacute;t lạnh" onclick="openTourModal(this)" style="cursor: pointer;">
+       <img alt="B&atilde;i Sao" src="https://image.pollinations.ai/prompt/V%C3%BAt%20X%C3%ADch%20%C4%91u%20ti%C3%AAn%20t%E1%BA%A1i%20B%C3%A3i%20Sao%20m%C3%A1t%20l%E1%BA%A1nh%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true"/>
+       <div class="suggested-card-overlay">
+        <h4>
+         V&uacute;t X&iacute;ch &dstrok;u ti&ecirc;n tại B&atilde;i Sao m&aacute;t lạnh
+        </h4>
+       </div>
+      </div>
+      <div class="suggested-card" data-adv="🌟 SI&Ecirc;U HOT: B&abreve;ng vịnh bằng C&aacute;p Treo H&ograve;n Thơm &dstrok;ang l&agrave; &dstrok;iểm &dstrok;ến &dstrok;ược s&abreve;n &dstrok;&oacute;n nhất!" data-desc='Bạn kh&ocirc;ng thể bỏ lỡ B&abreve;ng vịnh bằng C&aacute;p Treo H&ograve;n Thơm khi tới &dstrok;&acirc;y! &Dstrok;&acirc;y l&agrave; một &dstrok;iểm sinh th&aacute;i, check-in v&ocirc; c&ugrave;ng hấp dẫn với vẻ &dstrok;ẹp &dstrok;ộc &dstrok;&aacute;o. Tham quan nơi &dstrok;&acirc;y, bạn sẽ bị cuốn h&uacute;t bởi những khung cảnh lộng lẫy, kh&ocirc;ng gian kho&aacute;ng &dstrok;ạt v&agrave; nền v&abreve;n ho&aacute; &dstrok;ặc sắc. V&ocirc; v&agrave;n g&oacute;c m&aacute;y sống ảo "kh&ocirc;ng g&oacute;c chết" v&agrave; những trải nghiệm thực tế kh&oacute; qu&ecirc;n &dstrok;ang chờ &dstrok;&oacute;n bạn.' data-img="https://image.pollinations.ai/prompt/B%C4%83ng%20v%E1%BB%8Bnh%20b%E1%BA%B1ng%20C%C3%A1p%20Treo%20H%C3%B2n%20Th%C6%A1m%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true" data-time="Lịch tr&igrave;nh l&yacute; tưởng: Nh&acirc;m nhi vẻ &dstrok;ẹp v&agrave;o S&aacute;ng Ng&agrave;y 3." data-title="B&abreve;ng vịnh bằng C&aacute;p Treo H&ograve;n Thơm" onclick="openTourModal(this)" style="cursor: pointer;">
+       <img alt="H&ograve;n Thơm" src="https://image.pollinations.ai/prompt/B%C4%83ng%20v%E1%BB%8Bnh%20b%E1%BA%B1ng%20C%C3%A1p%20Treo%20H%C3%B2n%20Th%C6%A1m%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true"/>
+       <div class="suggested-card-overlay">
+        <h4>
+         B&abreve;ng vịnh bằng C&aacute;p Treo H&ograve;n Thơm
+        </h4>
+       </div>
+      </div>
+      <div class="suggested-card" data-adv="🌟 SI&Ecirc;U HOT: Tuyệt t&aacute;c nghệ thuật Kiss Bridge &dstrok;ang l&agrave; &dstrok;iểm &dstrok;ến &dstrok;ược s&abreve;n &dstrok;&oacute;n nhất!" data-desc='Bạn kh&ocirc;ng thể bỏ lỡ Tuyệt t&aacute;c nghệ thuật Kiss Bridge khi tới &dstrok;&acirc;y! &Dstrok;&acirc;y l&agrave; một &dstrok;iểm sinh th&aacute;i, check-in v&ocirc; c&ugrave;ng hấp dẫn với vẻ &dstrok;ẹp &dstrok;ộc &dstrok;&aacute;o. Tham quan nơi &dstrok;&acirc;y, bạn sẽ bị cuốn h&uacute;t bởi những khung cảnh lộng lẫy, kh&ocirc;ng gian kho&aacute;ng &dstrok;ạt v&agrave; nền v&abreve;n ho&aacute; &dstrok;ặc sắc. V&ocirc; v&agrave;n g&oacute;c m&aacute;y sống ảo "kh&ocirc;ng g&oacute;c chết" v&agrave; những trải nghiệm thực tế kh&oacute; qu&ecirc;n &dstrok;ang chờ &dstrok;&oacute;n bạn.' data-img="https://image.pollinations.ai/prompt/Tuy%E1%BB%87t%20t%C3%A1c%20ngh%E1%BB%87%20thu%E1%BA%ADt%20Kiss%20Bridge%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true" data-time="Lịch tr&igrave;nh l&yacute; tưởng: Nh&acirc;m nhi vẻ &dstrok;ẹp v&agrave;o Chiều Ng&agrave;y 3." data-title="Tuyệt t&aacute;c nghệ thuật Kiss Bridge" onclick="openTourModal(this)" style="cursor: pointer;">
+       <img alt="Cầu H&ocirc;n" src="https://image.pollinations.ai/prompt/Tuy%E1%BB%87t%20t%C3%A1c%20ngh%E1%BB%87%20thu%E1%BA%ADt%20Kiss%20Bridge%20destination%20beautiful%20cinematic%20landscape%20photography%20high%20quality%20detailed%204k?width=500&amp;height=350&amp;nologo=true"/>
+       <div class="suggested-card-overlay">
+        <h4>
+         Tuyệt t&aacute;c nghệ thuật Kiss Bridge
+        </h4>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- 4. Đồ dùng cần chuẩn bị -->
+    <section class="detail-section">
+     <h2>
+      <i class="fas fa-suitcase-rolling">
+      </i>
+      &Dstrok;ồ d&ugrave;ng n&ecirc;n chuẩn bị
+     </h2>
+     <div class="packing-grid">
+      <div class="packing-card">
+       <i class="fas fa-swimsuit">
+       </i>
+       <h4>
+        &Dstrok;ồ bơi Sexy &amp; &Aacute;o phao c&aacute; nh&acirc;n
+       </h4>
+       <p>
+        Tuy dịch vụ cano lu&ocirc;n c&oacute; sẵn, nhưng nếu th&iacute;ch tự do v&agrave; ưa lặn bạn ho&agrave;n to&agrave;n n&ecirc;n mang phao cổ
+                            bơi &dstrok;ể check-in dễ nhất!
+       </p>
+      </div>
+      <div class="packing-card">
+       <i class="fas fa-sun">
+       </i>
+       <h4>
+        Kem chống nắng Max SPF (Nắp xịt)
+       </h4>
+       <p>
+        H&atilde;y lập tức bảo vệ ngay l&agrave;n da của bạn cực k&igrave; tối &dstrok;a v&igrave; bức xạ tia UV tại Ph&uacute; Quốc rất gắt
+                            khi lướt thuyền giữa &dstrok;ại dương rực tủa.
+       </p>
+      </div>
+      <div class="packing-card">
+       <i class="fas fa-glasses">
+       </i>
+       <h4>
+        K&iacute;nh r&acirc;m Ph&acirc;n cực &amp; M&utilde; rộng v&agrave;nh
+       </h4>
+       <p>
+        Người bạn kh&ocirc;ng bao giờ c&oacute; thể thiếu nếu bạn muốn sống ảo cực cool ngầu ngay tr&ecirc;n rạn san h&ocirc;,
+                            lộng gi&oacute; v&agrave; lấp l&aacute;nh ch&oacute;i chang.
+       </p>
+      </div>
+      <div class="packing-card">
+       <i class="fas fa-mobile-alt">
+       </i>
+       <h4>
+        T&uacute;i Nilon Chống Nước Thiết Bị
+       </h4>
+       <p>
+        S&oacute;ng &dstrok;&aacute;nh cano rất thường xuy&ecirc;n v&abreve;ng ướt ho&agrave;n to&agrave;n &dstrok;iện thoại của bạn tr&ecirc;n thuyền. Phải c&oacute;
+                            lớp bọc chắc chắn mới n&ecirc;n d&ugrave;ng.
+       </p>
+      </div>
+      <div class="packing-card">
+       <i class="fas fa-tshirt">
+       </i>
+       <h4>
+        V&aacute;y Maxi Dạ Hội D&agrave;i Thướt Tha
+       </h4>
+       <p>
+        M&agrave;u &dstrok;ặc trưng của Sunset Town l&agrave; v&agrave;ng &dstrok;ịa trung hải hay quảng trường La M&atilde;. M&agrave;u v&aacute;y Maxi s&aacute;ng
+                            bừng l&ecirc;n sẽ mang lại view h&agrave;ng hiệu.
+       </p>
+      </div>
+      <div class="packing-card">
+       <i class="fas fa-mask">
+       </i>
+       <h4>
+        K&iacute;nh bơi v&agrave; Ống Thở Lặn Gần
+       </h4>
+       <p>
+        G&oacute;c Gầm Gh&igrave; l&agrave; vương quốc San h&ocirc; dưới c&aacute;c &dstrok;ộ s&acirc;u chỉ hơn m&eacute;t nước, tự bơi lặn quan s&aacute;t ch&uacute;ng
+                            tự nhi&ecirc;n l&agrave; &dstrok;iều sung sướng tột &dstrok;ộ.
+       </p>
+      </div>
+     </div>
+    </section>
+   </div>
+   <aside class="detail-sidebar">
+    <div class="sticky-card">
+     <h3 class="sidebar-title">
+      Th&ocirc;ng tin t&oacute;m tắt
+     </h3>
+     <div class="info-item">
+      <i class="fas fa-map-pin">
+      </i>
+      <div class="info-content">
+       <h5>
+        Vị tr&iacute; &dstrok;ịa l&yacute;
+       </h5>
+       <p>
+        Nằm ngo&agrave;i khơi thuộc cực Vịnh Th&aacute;i Lan. T&ecirc;n &dstrok;ịa phương thuộc Th&agrave;nh phố &Dstrok;ảo Ph&uacute; Quốc, Tỉnh
+                            Ki&ecirc;n Giang.
+       </p>
+      </div>
+     </div>
+     <div class="info-item">
+      <i class="fas fa-sun">
+      </i>
+      <div class="info-content">
+       <h5>
+        M&ugrave;a &dstrok;ẹp nhất (Kh&iacute; hậu)
+       </h5>
+       <p>
+        Từ Th&aacute;ng 10 &dstrok;ến cuối T4. Biển ho&agrave;n to&agrave;n s&oacute;ng nhẹ dịu ngọt, rạn san h&ocirc; sinh &dstrok;ộng ngập tr&agrave;n m&agrave;u
+                            sắc, m&acirc;y trời rực rỡ kh&ocirc;ng mưa do m&ugrave;a kh&ocirc;.
+       </p>
+      </div>
+     </div>
+     <div class="info-item">
+      <i class="fas fa-utensils">
+      </i>
+      <div class="info-content">
+       <h5>
+        &Dstrok;ặc sản phải thử
+       </h5>
+       <p>
+        B&uacute;n quậy Kiến X&acirc;y trứ danh, Nhum biển nướng mỡ h&agrave;nh &dstrok;ập trứng, Ghẹ luộc H&agrave;m Ninh gi&ograve;n rụm
+                            ngọt lịm, v&agrave; Nước mắm c&aacute; cơm Ph&uacute; Quốc &dstrok;ượm vị.
+       </p>
+      </div>
+     </div>
+     <div class="info-item">
+      <i class="fas fa-wallet">
+      </i>
+      <div class="info-content">
+       <h5>
+        Chi ph&iacute; tham khảo
+       </h5>
+       <p>
+        4.000.000&dstrok; - 7.000.000&dstrok; do c&aacute;c khu quần thể vui chơi quy m&ocirc; của Vin hay Sun World gi&aacute; trị v&eacute;
+                            kh&aacute; &dstrok;ắt &dstrok;ỏ, nhưng tiền n&agrave;o của &dstrok;&oacute;.
+       </p>
+      </div>
+     </div>
+     <div class="info-item">
+      <i class="fas fa-plane">
+      </i>
+      <div class="info-content">
+       <h5>
+        Phương tiện di chuyển
+       </h5>
+       <p>
+        Gần như 100% bằng bay thẳng do Ph&uacute; Quốc c&oacute; c&agrave;ng H&agrave;ng kh&ocirc;ng Quốc Tế với &dstrok;ủ chặng trong v&agrave;
+                            ngo&agrave;i nước cực thuận lợi (Tầm 1 tiếng rưỡi bay).
+       </p>
+      </div>
+     </div>
+     <div class="info-item">
+      <i class="fas fa-exclamation-circle">
+      </i>
+      <div class="info-content">
+       <h5>
+        Mẹo / Lưu &yacute; &dstrok;ặc biệt
+       </h5>
+       <p>
+        Bắc &Dstrok;ảo v&agrave; Nam &Dstrok;ảo c&aacute;ch bờ nhau kh&aacute; xa tr&ecirc;n 50km &dstrok;ường, n&ecirc;n quy hoạch lịch tr&igrave;nh gom cụm r&otilde;
+                            mỗi ng&agrave;y &dstrok;i một khu vực &dstrok;ể kh&ocirc;ng mất qu&aacute; tải sức lực.
+       </p>
+      </div>
+     </div>
+     <button class="btn-primary" onclick="window.location.href='planner.html'" style="width: 100%; margin-top: 1rem; border-radius:12px;">
+      Th&ecirc;m v&agrave;o kế hoạch chuyến &dstrok;i
+      <i class="fas fa-arrow-right">
+      </i>
+     </button>
+    </div>
+   </aside>
+  </main>
+  <footer style="text-align: center; padding: 3rem 1.5rem; color: var(--text-muted); background: var(--bg-surface); opacity: 0.9;">
+   <p>
+    &copy; 2026 Vietnam Travel - Nền tảng chia sẻ th&ocirc;ng tin du lịch h&agrave;ng &dstrok;ầu.
+   </p>
+  </footer>
+  <script src="assets/js/modal.js">
+  </script>
+ </body>
 </html>
