@@ -1,3 +1,9 @@
+// --- 0. KIỂM TRA ĐĂNG NHẬP ---
+if (!localStorage.getItem('currentUser')) {
+    alert('Vui lòng đăng nhập để sử dụng tính năng Lập kế hoạch!');
+    window.location.href = 'login.html';
+}
+
 // --- 1. KHỞI TẠO DỮ LIỆU ---
 let plans = JSON.parse(localStorage.getItem('travelPlans')) || [];
 let myChart = null; // Biến để chứa biểu đồ

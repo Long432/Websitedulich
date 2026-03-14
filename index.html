@@ -15,7 +15,8 @@
     <div class="nav-logo">Vietnam Travel</div>
     <div class="nav-links">
       <a href="index.html" class="active">Trang chủ</a>
-      <a href="planner.html">Lập kế hoạch</a>
+      <a href="planner.html" onclick="checkPlannerAuth(event)">Lập kế hoạch</a>
+      <a href="login.html" id="auth-btn">Đăng nhập</a>
     </div>
   </nav>
 
@@ -154,6 +155,29 @@
     <p>&copy; 2026 Vietnam Travel - Designed with ❤️ by Team Sivi</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const authBtn = document.getElementById('auth-btn');
+      if (localStorage.getItem('currentUser') || localStorage.getItem('adminUser')) {
+        authBtn.textContent = 'Đăng xuất';
+        authBtn.href = '#';
+        authBtn.onclick = function(e) {
+          e.preventDefault();
+          localStorage.removeItem('currentUser');
+          localStorage.removeItem('adminUser');
+          window.location.reload();
+        };
+      }
+    });
+
+    function checkPlannerAuth(e) {
+      if (!localStorage.getItem('currentUser')) {
+        e.preventDefault();
+        alert('Vui lòng đăng nhập để sử dụng tính năng Lập kế hoạch!');
+        window.location.href = 'login.html';
+      }
+    }
+  </script>
 </body>
 
 </html>

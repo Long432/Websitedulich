@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập | Vietnam Travel</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .auth-container {
+      max-width: 450px;
+      margin: 80px auto;
+      padding: 30px;
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      text-align: center;
+    }
+    .auth-container h2 {
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    .auth-toggle {
+      margin-top: 15px;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .auth-toggle span {
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .admin-link {
+      display: block;
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: var(--text-muted);
+      text-decoration: underline;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="home-page">
+  <nav>
+    <div class="nav-logo">Vietnam Travel</div>
+    <div class="nav-links">
+      <a href="index.html">Trang chủ</a>
+      <a href="planner.html">Lập kế hoạch</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="auth-container">
+      <!-- Form Đăng nhập -->
+      <div id="login-form-container">
+        <h2>Đăng nhập Hệ thống</h2>
+        <form id="login-form" class="contact-form">
+          <div class="form-group">
+            <input type="email" id="login-email" placeholder="Địa chỉ Email (VD: test@gmail.com)" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="login-password" placeholder="Mật khẩu" required>
+          </div>
+          <button type="submit" class="btn-submit">Đăng Nhập <i class="fas fa-sign-in-alt"></i></button>
+        </form>
+        <p class="auth-toggle">Chưa có tài khoản? <span onclick="toggleAuth()">Tạo tài khoản mới</span></p>
+        <a href="admin-login.html" class="admin-link">Đăng nhập dành cho Quản trị viên (Admin)</a>
+      </div>
+
+      <!-- Form Đăng ký -->
+      <div id="register-form-container" class="hidden">
+        <h2>Tạo tài khoản mới</h2>
+        <form id="register-form" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="reg-name" placeholder="Họ và tên của bạn" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="reg-email" placeholder="Địa chỉ Email (VD: test@gmail.com)" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="reg-password" placeholder="Mật khẩu" required>
+          </div>
+          <button type="submit" class="btn-submit">Đăng Ký Tài Khoản <i class="fas fa-user-plus"></i></button>
+        </form>
+        <p class="auth-toggle">Đã có tài khoản? <span onclick="toggleAuth()">Đăng nhập ngay</span></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleAuth() {
+      document.getElementById('login-form-container').classList.toggle('hidden');
+      document.getElementById('register-form-container').classList.toggle('hidden');
+    }
+
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      if (email) {
+        localStorage.setItem('currentUser', JSON.stringify({ email: email }));
+        alert('Đăng nhập thành công! Chào mừng đến với Vietnam Travel.');
+        window.location.href = 'planner.html';
+      }
+    });
+
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('reg-name').value;
+      const email = document.getElementById('reg-email').value;
+      if (name && email) {
+        localStorage.setItem('currentUser', JSON.stringify({ name: name, email: email }));
+        alert('Tạo tài khoản thành công! Bây giờ bạn có thể sử dụng tính năng Lập kế hoạch.');
+        window.location.href = 'planner.html';
+      }
+    });
+  </script>
+</body>
+</html>
