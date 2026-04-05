@@ -7,7 +7,7 @@ Chào mừng đến với dự án Bài Tập Lớn môn Cơ Sở Lập Trình W
 | STT | Họ và Tên | Vai trò |
 | :-- | :--- | :--- |
 | 1 | **Đỗ Hoàng Long** 
-| 2 | **Nguyễn Đức Duy BIT240080** 
+| 2 | **Nguyễn Đức Duy ** 
 | 3 | **Phạm Ngọc Thành** 
 | 4 | **Nguyễn Ngọc Sơn**
 | 5 | **Trần Đức Mạnh** 
